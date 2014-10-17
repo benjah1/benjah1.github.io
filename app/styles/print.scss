@@ -1,0 +1,114 @@
+* {
+	font-size: 12px!important;
+	color: black;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-transform: none;
+	margin: 5px 0 5px 0!important;
+}
+
+h1 {
+	font-size: 24px!important;
+}
+
+h2 {
+	font-size: 16px!important;
+}
+
+h3 {
+	font-size: 14px!important;
+}
+
+nav {
+	display:none;
+}
+
+hr, img, blockquote {
+	display: none!important;
+}
+
+.print-only  {
+	display: block;
+}
+.print-push {
+	padding-left: 15px;
+}
+.row, .col {
+	margin: 0;
+}
+
+.text-center {
+	text-align: left;
+}
+
+.col-md-offset-1 {
+	margin-left: 0;
+}
+
+.fade {
+	opacity: 1;
+	transform: translateX(0%);
+}
+
+header {
+	.container {
+		padding: 0;
+		.resume {
+			display: none;
+		}
+	}
+}
+
+section {
+	padding: 0;
+}
+
+&#portfolio {
+	.portfolio-item {
+		display: none;
+	}
+}	
+
+&#contact{
+	display: none;
+}
+
+#skill, #work, #ref {
+	display:block;
+}
+
+#skill {
+	b {
+		width: 140px;
+		display: inline-block;
+	}
+	p {
+		display: inline-block;
+	}
+}
+
+.portfolio-modal {
+	display:block;
+	position: inherit;
+	opacity: 1;
+	margin: 0;
+	padding: 0;
+	
+	.modal-content {
+		padding: 0;
+		
+		.modal-body {
+			margin:0;
+			padding: 0;
+			padding-left: 15px;
+		}
+	}
+	
+	.close-modal {
+		display: none;
+	}
+}
+
+footer {
+	display: none;
+}
