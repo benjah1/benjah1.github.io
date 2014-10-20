@@ -1,5 +1,6 @@
-node_modules
-dist
-.tmp
-.sass-cache
-bower_components
+workspace/node_modules
+workspace/dist
+workspace/.tmp
+workspace/.sass-cache
+workspace/bower_components
+vm/puphpet
