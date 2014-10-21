@@ -1,0 +1,162 @@
+#ground{
+	width:400px;
+	height:300px;
+	margin-left:-200px;
+	margin-bottom:-150px;
+	background-color:#FFF;
+	/*box-shadow:0px 0px 6px 6px #DEDEDE; crash on firefox*/
+}
+
+/*/////////////////////////
+//	trees
+/////////////////////////*/
+#tree0{
+	width:50px;
+	height:100px;
+	margin-left:-25px;
+	margin-bottom:-50px;
+	/*background-color:#FE9;*/
+	/*background-image:url('../tree0.png');*/
+}
+#tree1{
+	width:180px;
+	height:120px;
+	margin-left:-90px;
+	margin-bottom:-60px;
+	background-color:#CCF;
+}
+#tree2{
+	width:140px;
+	height:100px;
+	margin-left:-70px;
+	margin-bottom:-50px;
+	background-color:#99F;
+}
+#tree3{
+	width:100px;
+	height:80px;
+	margin-left:-50px;
+	margin-bottom:-40px;
+	background-color:#66F;
+}
+#star{
+	width:60px;
+	height:60px;
+	margin-left:-30px;
+	margin-bottom:-30px;
+	background-color:#0FF;
+}
+
+/*/////////////////////////
+//	snowmen
+/////////////////////////*/
+#snowman0{
+	width:180px;
+	height:80px;
+	margin-left:-90px;
+	margin-bottom:-40px;
+	background-color:#EEE;
+}
+#snowman1{
+	width:90px;
+	height:60px;
+	margin-left:-45px;
+	margin-bottom:-30px;
+	background-color:#CCF;
+}
+#snowman2{
+	width:70px;
+	height:50px;
+	margin-left:-35px;
+	margin-bottom:-25px;
+	background-color:#FAA;
+}
+#snowman3{
+	width:40px;
+	height:40px;
+	margin-left:-20px;
+	margin-bottom:-20px;
+	background-color:#F99;
+}
+#snowman4{
+	width:30px;
+	height:30px;
+	margin-left:-15px;
+	margin-bottom:-15px;
+	background-color:#99F;
+}
+
+/*/////////////////////////
+//	boxa 40*20*40
+//  front,left,top,right
+/////////////////////////*/
+#boxa0,#boxa1,#boxa3{
+	width:40px;
+	height:20px;
+	margin-left:-20px;
+	margin-bottom:-10px;
+	background-color:#A00;
+}
+#boxa1{
+	background-color:#A33;
+}
+#boxa2{
+	width:40px;
+	height:40px;
+	margin-left:-20px;
+	margin-bottom:-20px;
+	background-color:#A66;
+}
+#boxa3{
+	background-color:#A99;
+}
+
+/*/////////////////////////
+//	boxb 30*30*30
+/////////////////////////*/
+#boxb0,#boxb1,#boxb2,#boxb3{
+	width:30px;
+	height:30px;
+	margin-left:-15px;
+	margin-bottom:-15px;
+	background-color:#0A0;
+}
+#boxb1{
+	background-color:#3A3;
+}
+#boxb2{
+	background-color:#6A6;
+}
+#boxb3{
+	background-color:#9A9;
+}
+
+/*/////////////////////////
+//	boxc 60*20*60
+/////////////////////////*/
+#boxc0,#boxc1,#boxc3{
+	width:60px;
+	height:20px;
+	margin-left:-30px;
+	margin-bottom:-10px;
+	background-color:#00A;
+}
+#boxc1{
+	background-color:#33A;
+}
+#boxc2,#boxc4{
+	width:60px;
+	height:60px;
+	margin-left:-30px;
+	margin-bottom:-30px;
+	background-color:#66A;
+}
+#boxc3{
+	background-color:#99A;
+}
+#boxc4{
+	background-color:#AAA;
+}
+
+
+

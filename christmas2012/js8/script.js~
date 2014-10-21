@@ -1,0 +1,100 @@
+var dPi = Math.PI/180;
+var fps = 60;
+var domTransform,cssTransform,
+	cssTransformStyle,
+	domPerspective,cssPerspective;
+
+function domToCss(property) {
+	var css = property.replace(/([A-Z])/g, function (str, m1) {
+		return '-' + m1.toLowerCase();
+	}).replace(/^ms-/,'-ms-');
+
+	return css;
+}
+
+jQuery(function($){
+
+		domTransform = Modernizr.prefixed('transform');
+		cssTransform = domToCss(domTransform);
+	
+		cssTransformStyle = cssTransform + '-style';
+		
+		domPerspective = Modernizr.prefixed('perspective');
+		cssPerspective = domToCss(domPerspective);
+		
+		$('#stage').css(cssTransformStyle,'preserve-3d').css(cssPerspective,600);
+
+		var myworld = new World();
+			//myworld.start();
+			
+		var objects = initWorld(myworld);
+
+		var ox=oy=0;
+		var ishold = false;
+
+		$('body').mousedown(function(e){
+			ishold=true;
+			ox = parseInt(e.clientX, 10);
+			oy = parseInt(e.clientY, 10);
+		});
+		$('body').mousemove(function(e){
+			ishold=false;
+			
+			var x = parseInt(e.clientX, 10),
+					y = parseInt(e.clientY, 10),
+					p = $('#stage').offset();
+					
+			if(Math.abs(x-p.left-300)>400)
+				x = p.left +300+(x>p.left+300?1:-1)*400; 
+			if(Math.abs(y-p.top-200)>250)
+				y = p.top +250+(x>p.top+200?1:-1)*200; 
+
+
+			var dx = -(p.left+300-x)/1000, 
+					dy = (p.top+200-y)/2000;
+//console.log(dx+' '+dy);
+			
+			myworld.update(objects['ground'],function(obj){
+				//obj.animates = Array();
+				var tmpdx = obj.dx?obj.dx:0;
+				obj.animates.push(new Animate({
+					func:mat4.rotateY,
+					type:'rotate',
+					easing:'easeIn',
+					args:[obj.world],
+					from:tmpdx,
+					to:dx,
+					time:1000
+				}));
+				obj.dx=dx;
+			});
+
+			myworld.update(objects['groundY'],function(obj){
+				//obj.animates = Array();
+				var tmpdy = obj.dy?obj.dy:0;
+				obj.animates.push(new Animate({
+					func:mat4.rotateX,
+					type:'rotate',
+					easing:'easeIn',
+					args:[obj.world],
+					from:tmpdy,
+					to:dy,
+					time:1000
+				}));
+				obj.dy=dy;
+			});
+
+			ox=x;
+			oy=y;
+		});
+		
+		$('#envelope').click(function(){
+				$('body > *').css('display','block');
+				$('body > #conver').css('display','show');
+		});
+
+		$('body').ontouchend=function(){
+			alert('tr');
+		};
+		
+});

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="./js/modernizr-latest.js"></script>
+		<script type="text/javascript" src="./js/gl-matrix.js"></script>
+		<script type="text/javascript" src="./js8/three.js"></script>
+		<script type="text/javascript" src="./js8/init.js"></script>
+		<script type="text/javascript" src="./js8/script.js"></script>
+		<link href="./css8/style.css" rel="stylesheet" type="text/css" />
+		<link href="./css8/object.css" rel="stylesheet" type="text/css" />
+		<link href="./css8/texture.css" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+
+		<style type="text/css">
+		</style>
+		
+		<title>Christmas v.2.0.12</title>
+	</head>
+	<body>
+		<div id="conver">
+		<div id="conver-y">
+			<span id="envelope"><img src="./envelope.png"/></span>
+		</div>
+		</div>
+
+		<div id="stage">
+			<div id='ground' class='td'></div>
+
+			<div id='greeting' class='td'>
+				<p>Merry<br/>&nbsp;&nbsp;&nbsp;&nbsp;Christmas</p>
+			</div> 
+			
+			<div id='tree0' class='td'></div>
+			<div id='tree1' class='td'></div>
+			<div id='tree2' class='td'></div>
+			<div id='tree3' class='td'></div>
+			<div id='star' class='td'></div>
+
+			<div id='snowman0' class='td'></div>
+			<div id='snowman1' class='td'></div>
+			<div id='snowman2' class='td'></div>
+			<div id='snowman3' class='td'></div>
+			<div id='snowman4' class='td'></div>
+
+			<div id='boxa0' class='td'></div>
+			<div id='boxa1' class='td'></div>
+			<div id='boxa2' class='td'></div>
+			<div id='boxa3' class='td'></div>
+
+			<div id='boxb0' class='td'></div>
+			<div id='boxb1' class='td'></div>
+			<div id='boxb2' class='td'></div>
+			<div id='boxb3' class='td'></div>
+
+			<div id='boxc0' class='td'></div>
+			<div id='boxc3' class='td'></div>
+			<div id='boxc2' class='td'></div>
+			<div id='boxc4' class='td'></div>
+		</div>
+
+		<div id="content">
+			<div style="text-align:center;font-size:40px;color:#EEE;margin:0 auto;width:600px;">
+				<p>在圣诞和新年来临之际<br/>祝福你平安,快乐,幸福 </p>
+				<p>Wishing you <br/>peace, joy and happiness <br/>through <br/>Christmas <br/>and <br/>the coming year. </p>
+				<p>by </p>
+				<span><img src="./sign.png" alt="Zhibin and his wife"/></span>
+			</div>
+		</div>
+
+		<div id="share">
+			<div class="tw-share"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a></div>
+			<div class="fb-like" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-colorscheme="dark"></div>
+			<div class="weibo-share" ><span></span></div>
+		</div>
+
+		<div id="donate">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+			">
+			<input alt="Paypal donate button" title="Please send me a dollar so that I can buy a better gift to my wife for Valentine's Day" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</div>
+
+		<div id="footer">
+					<div id="copyright">Copyright &copy; 2011-2012 Zhibin Huang. All Rights Reserved.</div>
+			:)
+		</div>
+
+		<div id="script">
+			<div id="fb-root"></div>
+			<script type="text/javascript">
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-26891855-1']);
+			  _gaq.push(['_trackPageview']);
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+			</script>
+
+		</div>
+	</body>
+</html>

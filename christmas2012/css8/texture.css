@@ -1,0 +1,84 @@
+.td{
+	background-repeat:no-repeat;
+	background-color:transparent!important;
+	background-image:url('../texture.png');
+} 
+#ground{
+	background-image:none;
+	background-color:#FFF!important;
+} 
+#greeting{
+	background-image:none;
+	color:#F00;
+	font-size:50px;
+	font-weight:bold;
+	font-family: 'Clicker Script', serif;
+} 
+#tree0{	
+	background-position:0px 0px; 	
+}
+#tree1{	
+	background-position:0px -100px; 	
+}
+#tree2{	
+	background-position:0px -220px; 	
+}
+#tree3{	
+	background-position:0px -320px; 
+}
+#star{	
+	background-position:0px -400px; 	
+}
+#snowman0{	
+	background-position:-180px 0px; 	
+}
+#snowman1{	
+	background-position:-180px -80px; 	
+}
+#snowman2{	
+	background-position:-270px -80px; 	
+}
+#snowman3{	
+	background-position:-180px -140px; 	
+	display:none;
+}
+#snowman4{	
+	background-position:-270px -130px; 	
+	display:none;
+}
+#boxa0{	
+	background-position:-240px -200px; 	
+}
+#boxa1{	
+	background-position:-200px -200px; 	
+}
+#boxa2{	
+	background-position:-240px -220px; 	
+}
+#boxa3{	
+	background-position:-280px -200px; 	
+}
+#boxb0{	
+	background-position:-280px -230px; 	
+}
+#boxb1{	
+	background-position:-250px -260px; 	
+}
+#boxb2{	
+	background-position:-280px -260px; 	
+}
+#boxb3{	
+	background-position:-310px -260px; 	
+}
+#boxc0{	
+	background-position:-210px -360px; 	
+}
+#boxc2{	
+	background-position:-270px -300px; 	
+}
+#boxc3{	
+	background-position:-270px -360px; 	
+}
+#boxc4{	
+	background-position:-270px -380px; 	
+}

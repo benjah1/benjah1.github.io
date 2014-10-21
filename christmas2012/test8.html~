@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="./js/modernizr-latest.js"></script>
+		<script type="text/javascript" src="./js/gl-matrix.js"></script>
+		<script type="text/javascript" src="./js8/three.js"></script>
+		<script type="text/javascript" src="./js8/init.js"></script>
+		<script type="text/javascript" src="./js8/script.js"></script>
+		<link href="./css8/style.css" rel="stylesheet" type="text/css" />
+		<link href="./css8/object.css" rel="stylesheet" type="text/css" />
+		<link href="./css8/texture.css" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+
+		<style type="text/css">
+		</style>
+		
+		<title>Christmas v.2.0.12</title>
+	</head>
+	<body>
+		<div id="conver">
+			<div class="letter"><img/></div>
+		</div>
+		<div id="stage">
+			<div id='ground' class='td'></div>
+
+			<div id='greeting' class='td'>
+				<p>Merry<br/>&nbsp;&nbsp;&nbsp;&nbsp;Christmas</p>
+			</div> 
+			
+			<div id='tree0' class='td'></div>
+			<div id='tree1' class='td'></div>
+			<div id='tree2' class='td'></div>
+			<div id='tree3' class='td'></div>
+			<div id='star' class='td'></div>
+
+			<div id='snowman0' class='td'></div>
+			<div id='snowman1' class='td'></div>
+			<div id='snowman2' class='td'></div>
+			<div id='snowman3' class='td'></div>
+			<div id='snowman4' class='td'></div>
+
+			<div id='boxa0' class='td'></div>
+			<div id='boxa1' class='td'></div>
+			<div id='boxa2' class='td'></div>
+			<div id='boxa3' class='td'></div>
+
+			<div id='boxb0' class='td'></div>
+			<div id='boxb1' class='td'></div>
+			<div id='boxb2' class='td'></div>
+			<div id='boxb3' class='td'></div>
+
+			<div id='boxc0' class='td'></div>
+			<div id='boxc3' class='td'></div>
+			<div id='boxc2' class='td'></div>
+			<div id='boxc4' class='td'></div>
+		</div>
+
+		<div id="content">
+			<div style="text-align:center;font-size:40px;color:#EEE;margin:0 auto;width:600px;">
+				<p>Wishing you <br/>peace, joy and happiness <br/>through <br/>Christmas <br/>and <br/>the coming year. </p>
+				<p>在圣诞和新年来临之际<br/>祝福你平安,快乐,幸福 </p>
+			</div>
+		</div>
+
+		<div id="share">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+			<div class="fb-like" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-colorscheme="dark"></div>
+			<div class="weibo-share" ></div>
+		</div>
+
+		<div id="script">
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
+			<script type="text/javascript" charset="utf-8">
+			(function(){
+			  var _w = 90 , _h = 24;
+			  var param = {
+				url:location.href,
+				type:'2',
+				count:'1', /**是否显示分享数，1显示(可选)*/
+				appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+				title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+				pic:'', /**分享图片的路径(可选)*/
+				ralateUid:'1202042481', /**关联用户的UID，分享微博会@该用户(可选)*/
+				language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+				rnd:new Date().valueOf()
+			  }
+			  var temp = [];
+			  for( var p in param ){
+				temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+			  }
+			  $('.weibo-share').append('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+			})()
+			</script>
+
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</body>
+</html>
