@@ -63,23 +63,31 @@ section {
 	padding: 0;
 }
 
-&#portfolio {
+#portfolio {
 	.portfolio-item {
 		display: none;
 	}
 }	
 
-&#contact{
+#about{
+	display: none;
+}
+
+#contact{
 	display: none;
 }
 
 #skill, #work, #ref {
-	display:block;
+	display: block;
+}
+
+.scroll-top{
+	display: none;
 }
 
 #skill {
 	b {
-		width: 140px;
+		width: 100px;
 		display: inline-block;
 	}
 	p {
@@ -88,7 +96,7 @@ section {
 }
 
 .portfolio-modal {
-	display:block;
+	display: block;
 	position: inherit;
 	opacity: 1;
 	margin: 0;
@@ -111,4 +119,8 @@ section {
 
 footer {
 	display: none;
+}
+
+.scroll-top{
+	display:none;
 }

@@ -62,8 +62,8 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="hidden"><a href="#page-top"></a></li>
-						<li class="page-scroll"><a href="#about">About</a></li>
 						<li class="page-scroll"><a href="#portfolio">Portfolio</a></li>
+						<li class="page-scroll"><a href="#about">About</a></li>
 						<li class="page-scroll"><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
@@ -85,38 +85,12 @@
 							<span class="email print-only">benjaminhuang1@gmail.com</span>
 						</div>
 						<div class="resume">
-							<a class="btn btn-default" onclick="print();">Print Resume</a> or <a class="btn btn-default" target="_blank" href="/Resume.pdf">Resume.pdf </a>
+							<a class="btn btn-info btn-lg" onclick="print();">Print Resume</a> or <a class="btn btn-info btn-lg" target="_blank" href="/Resume.pdf">Resume.pdf </a>
 						</div>
 					</div>
 				</div>
 			</div>
     </header>
-		
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h2>About</h2>
-            <hr class="star-primary">
-          </div>
-        </div>
-				<div class="row print-push">
-					<div class="col-md-10 col-md-offset-1">
-						<h3>Zhibin specializes with how data is presented and collected in between servers and browsers. </h3>
-					</div>
-					<div class="col-md-10 col-md-offset-1">
-						<blockquote><p>Bad programmers worry about the code. Good programmers worry about data structures and their relationships.</p><footer><cite title="Linus Torvalds">Linus Torvalds</cite></footer></blockquote>
-					</div>
-					<div class="col-md-10 col-md-offset-1">
-						<p>Zhibin believes that good data structures generates good code, and the same applies to web. Zhibin continues to understand more complex data structures, and also deliver more simplified, elegant front-end solutions.</p>
-					</div>
-					<div class="col-md-10 col-md-offset-1">
-						<p>Zhibin has also acquired Zend PHP certificate (ZCE ID. ZEND022796).</p>
-					</div>
-				</div>
-      </div>
-    </section>
 		
     <!-- Skill Grid Section -->
     <section id="skill">
@@ -163,52 +137,32 @@
 		</section>
 		
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="success">
+    <section id="portfolio">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<h2>Portfolio</h2>
-						<hr class="star-light">
+						<hr class="star-primary">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-6 col-md-4 portfolio-item">
 						<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
 							<img src="images/portfolio/ilpa.jpg" class="img-responsive" alt="ILPA logo">
 						</a>
 					</div>
 					<div class="col-sm-6 col-md-4 portfolio-item">
 						<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
 							<img src="images/portfolio/bgcc.jpg" class="img-responsive" alt="">
 						</a>
 					</div>
 					<div class="col-sm-6 col-md-4 portfolio-item">
 						<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
 							<img src="images/portfolio/radii.jpg" class="img-responsive" alt="">
 						</a>
 					</div>
 					<div class="col-sm-6 col-md-4 portfolio-item">
 						<a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
 							<div class="portfolio-custom">
 								<div><div>Other Project</div></div>
 								<img src="images/portfolio/custom.jpg" class="img-responsive" alt="">
@@ -217,11 +171,6 @@
 					</div>
 					<div class="col-sm-6 col-md-4 portfolio-item">
 						<a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
 							<div class="portfolio-custom">
 								<div><div>Personal Project</div></div>
 								<img src="images/portfolio/custom.jpg" class="img-responsive" alt="">
@@ -239,12 +188,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-1">
 							<div class="modal-body">
-								<div class="close-modal" data-dismiss="modal">
-									<div class="lr">
-										<div class="rl">
-										</div>
-									</div>
-								</div>
+								<button type="button" class="btn btn-default pull-right" data-dismiss="modal"><i class="fa fa-times"></i></button>
 								<h2>Institutional Limited Partners Association</h2>
 								<hr class="break">
 								
@@ -271,7 +215,7 @@
 								</ul>
 
 								<footer>
-									<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+									<button type="button" class="btn btn-default btn-lg" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
 								</footer>
 							</div>
 						</div>
@@ -285,12 +229,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-1">
 							<div class="modal-body">
-								<div class="close-modal" data-dismiss="modal">
-									<div class="lr">
-										<div class="rl">
-										</div>
-									</div>
-								</div>
+								<button type="button" class="btn btn-default pull-right" data-dismiss="modal"><i class="fa fa-times"></i></button>
 								<h2>Boys and Girls Clubs of Canada</h2>
 								<hr class="break">
 								
@@ -313,7 +252,7 @@
 								</ul>
 
 								<footer>
-									<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+									<button type="button" class="btn btn-default btn-lg" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
 								</footer>
 							</div>
 						</div>
@@ -327,12 +266,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-1">
 							<div class="modal-body">
-								<div class="close-modal" data-dismiss="modal">
-									<div class="lr">
-										<div class="rl">
-										</div>
-									</div>
-								</div>
+								<button type="button" class="btn btn-default pull-right" data-dismiss="modal"><i class="fa fa-times"></i></button>
 								<h2>Radii Production</h2>
 								<hr class="break">
 
@@ -359,7 +293,7 @@
 								</ul>
 
 								<footer>
-									<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+									<button type="button" class="btn btn-default btn-lg" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
 								</footer>
 							</div>
 						</div>
@@ -373,12 +307,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-1">
 							<div class="modal-body">
-								<div class="close-modal" data-dismiss="modal">
-									<div class="lr">
-										<div class="rl">
-										</div>
-									</div>
-								</div>
+								<button type="button" class="btn btn-default pull-right" data-dismiss="modal"><i class="fa fa-times"></i></button>
 								<h2>Other Project</h2>
 								<hr class="break">
 								
@@ -396,7 +325,7 @@
 								</ul>
 
 								<footer>
-									<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+									<button type="button" class="btn btn-default btn-lg" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
 								</footer>
 							</div>
 						</div>
@@ -410,12 +339,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-1">
 							<div class="modal-body">
-								<div class="close-modal" data-dismiss="modal">
-									<div class="lr">
-										<div class="rl">
-										</div>
-									</div>
-								</div>
+								<button type="button" class="btn btn-default pull-right" data-dismiss="modal"><i class="fa fa-times"></i></button>
 								<h2>Personal Project</h2>
 								<hr class="break">
 
@@ -435,7 +359,7 @@
 								</ul>
 
 								<footer>
-									<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+									<button type="button" class="btn btn-default btn-lg" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
 								</footer>
 							</div>
 						</div>
@@ -444,6 +368,31 @@
 			</div>
     </div>
 
+    <!-- About Section -->
+    <section id="about" class="success">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>About</h2>
+            <hr class="star-light">
+          </div>
+        </div>
+				<div class="row print-push">
+					<div class="col-md-10 col-md-offset-1">
+						<h3>Zhibin specializes with how data is presented and collected in between servers and browsers. </h3>
+					</div>
+					<div class="col-md-10 col-md-offset-1">
+						<blockquote><p>Bad programmers worry about the code. Good programmers worry about data structures and their relationships.</p><footer><cite title="Linus Torvalds">Linus Torvalds</cite></footer></blockquote>
+					</div>
+					<div class="col-md-10 col-md-offset-1">
+						<p>Zhibin believes that good data structures generates good code, and the same applies to web. Zhibin continues to understand more complex data structures, and also deliver more simplified, elegant front-end solutions.</p>
+					</div>
+					<div class="col-md-10 col-md-offset-1">
+						<p>Zhibin has also acquired Zend PHP certificate (ZCE ID. ZEND022796).</p>
+					</div>
+				</div>
+      </div>
+    </section>
 
 		<!-- References Grid Section -->
 		<section id="ref">
@@ -451,7 +400,7 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<h2>References</h2>
-						<hr class="star-primary">
+						<hr class="star-light">
 					</div>
 				</div>
 				<div class="row print-push">
@@ -473,7 +422,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-							<a href="mailto:benjaminhuang1@gmail.com" class="btn btn-success">Email Zhibin</a>
+							<a href="mailto:benjaminhuang1@gmail.com" class="btn btn-primary btn-lg">Email Zhibin</a>
           </div>
         </div>
       </div>
@@ -514,7 +463,7 @@
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visble-sm">
-			<a class="btn btn-primary" href="#page-top">
+			<a class="btn btn-info" href="#page-top">
 				<i class="fa fa-chevron-up"></i>
 			</a>
     </div>

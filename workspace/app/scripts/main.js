@@ -25,8 +25,7 @@
 		// Sticky header
 		(function($) {
 			var header = $('.navbar-fixed-top' ),
-				didScroll = false,
-				changeHeaderOn = 300;
+				didScroll = false;
 
 			function init() {
 				$(window).scroll(function() {
@@ -39,7 +38,7 @@
 
 			function scrollPage() {
 				var sy = $(window).scrollTop();
-				if ( sy >= changeHeaderOn ) {
+				if ( sy >= header.height() - 100 ) {
 					header.addClass('navbar-shrink');
 				}
 				else {

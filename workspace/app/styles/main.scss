@@ -2,20 +2,33 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 $screen-lg: 1200px;
 $screen-md: 992px;
-$screen-sm: 480px;
+$screen-sm: 720px;
 $screen-xs: 320px;
+
 $container-tablet: 720px;
 
 // Variables
-$brand-primary: #0CA209;
-$brand-primary2: #EE6701;
-$brand-primary3: #6F3A11;
-$brand-primary4: #341BAF;
-$brand-success: #0CA209;
+$brand-primary: #0a8f08;
+$brand-primary2: #E77C2A; // #5 
+$brand-primary3: #68350E; // #4
+$brand-primary4: #4B38A8; // #2
+$brand-success: $brand-primary;
+$brand-info: $brand-primary2;
 
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+@mixin transition($t) {
+	transition:$t 0.4s linear;
+}
+@mixin box-shadow($size) {
+	@if $size == 'lg' {
+		box-shadow: 0 4px 10px rgba(0,0,0,.8);
+	} @else {
+		box-shadow: 0 4px 8px rgba(0,0,0,.5);
+	}
+}
 
 body {
 	overflow-x: hidden;
@@ -58,6 +71,25 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.btn {
+	border-radius: 0px;
+	border: none;
+	@include transition(all);
+	&:hover {
+		@include box-shadow(sm);
+		border: none;
+	}
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+	background-color: $brand-primary;
+}
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+	background-color: $brand-info;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+	background-color: #fff;
+}
+
 hr.break {
 	padding: 0;
 	border: none;
@@ -87,21 +119,19 @@ hr.star-primary:after {
 }
 
 hr.star-light {
-    border-color: white;
-}
-
-hr.star-light:after {
-    background-color: $brand-primary;
-    color: white;
+	border-color: white;
+	&:after {
+		background-color: $brand-primary;
+		color: white;
+	}
 }
 
 hr.star-primary {
-    border-color: $brand-primary;
-}
-
-hr.star-primary:after {
+  border-color: $brand-primary;
+	&:after {
     background-color: white;
     color: $brand-primary;
+	}
 }
 
 .img-centered {
@@ -155,41 +185,28 @@ header {
 	}
 }
 
-@media(min-width:$screen-sm) {
-    .navbar-fixed-top {
-        padding: 25px 0;
-        -webkit-transition: padding 0.3s;
-        -moz-transition: padding 0.3s;
-        transition: padding 0.3s;
-	    .navbar-brand {
-	        font-size: 2em;
-	        -webkit-transition: all 0.3s;
-	        -moz-transition: all 0.3s;
-	        transition: all 0.3s;
-	    }
-    }
-    .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
-		.navbar-brand {
-	        font-size: 1.5em;
-	    }    
-	}
-}
-
 .navbar {
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
+	@include box-shadow(sm);
 
 	.navbar-nav {
 		letter-spacing: 1px;
 		li {
 			a {
-				transition: all 0.8s;
+				transition: all 0.4s;
 				
 				&:focus {
 					outline: none;
 				}
+			}
+			&:hover {
+				a {
+					@include box-shadow(sm);
+					background-color: #e7e7e7;
+				}
+				z-index: 2;
 			}
 		}
 	}
@@ -198,6 +215,27 @@ header {
 .navbar-default,
 .navbar-inverse {
 	border: none;
+}
+
+@media(min-width:$screen-sm) {
+	.navbar-fixed-top {
+			padding: 25px 0;
+			-webkit-transition: padding 0.3s;
+			-moz-transition: padding 0.3s;
+			transition: padding 0.3s;
+		.navbar-brand {
+				font-size: 2em;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+		}
+	}
+	.navbar-fixed-top.navbar-shrink {
+			padding: 10px 0;
+	.navbar-brand {
+				font-size: 1.5em;
+		}
+	}
 }
 
 .modal-open {
@@ -237,60 +275,37 @@ section.success {
 		margin: 0 0 15px;
 		right: 0;
 		.portfolio-link {
-				display: block;
+			display: block;
+			position: relative;
+			max-width: 400px;
+			margin: 0 auto;
+			@include transition(all);
+			
+			.portfolio-custom {
 				position: relative;
-				max-width: 400px;
-				margin: 0 auto;
-				.caption {
-						background: transparentize($brand-primary2, 0.2);
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						opacity: 0;
-						transition: all ease 0.5s;
-						-webkit-transition: all ease 0.5s;
-						-moz-transition: all ease 0.5s;
-						&:hover {
-								opacity: 1;
-						}
-						.caption-content {
-								position: absolute;
-								width: 100%;
-								height: 20px;
-								font-size: 20px;
-								text-align: center;
-								top: 50%;
-								margin-top: -12px;
-								color: white;
-								i {
-										margin-top: -12px;
-								}
-								h3,
-								h4 {
-										margin: 0;
-								}
-						}                
-				}    
-				.portfolio-custom {
-					position: relative;
-					background-color: $brand-primary4;
-					max-width: 360px;
-					z-index: 1;
+				background-color: $brand-primary4;
+				max-width: 360px;
+				z-index: 1;
+				&> div {
+					position: absolute;
+					color: #fff;
+					top: 40%;
+					width: 100%;
 					&> div {
-						position: absolute;
-						color: #fff;
-						top: 40%;
-						width: 100%;
-						&> div {
-							text-align: center;
-							font-size: 30px;
-							font-weight: bold;
-						}
-					}
-					img {
-						visibility: hidden;
+						text-align: center;
+						font-size: 30px;
+						font-weight: bold;
 					}
 				}
+				img {
+					visibility: hidden;
+				}
+			}
+			
+			&:hover {
+				@include box-shadow(lg);
+			}
+		
 		}
 	}
 	* {
@@ -310,6 +325,9 @@ section.success {
 	.btn {
 		padding: 6px 40px;
 		font-size: 40px;
+		&:hover {
+			@include box-shadow(lg);
+		}
 	}
 }
 
@@ -377,7 +395,6 @@ footer {
 	.modal-content {
 		border-radius: 0;
 		background-clip: border-box;
-		-webkit-box-shadow: none;
 		box-shadow: none;
 		border: none;
 		min-height: 100%;
@@ -399,34 +416,7 @@ footer {
 		footer {
 			margin-top: 50px;
 		}
-
-		.close-modal {
-			position: absolute;
-			width:75px;
-			height:75px;
-			background-color:transparent;
-			top: -50px;
-			left: 5px;
-			cursor: pointer;
-			&:hover {
-				opacity: 0.3;
-			}
-			.lr {
-				height:45px;
-				width:1px;
-				margin-left:35px;
-				background-color:black;
-				transform: rotate(45deg);
-				z-index:1051;
-				.rl {
-					height:45px;
-					width:1px;
-					background-color:black;
-					transform: rotate(90deg);
-					z-index:1052;
-				}
-			}            
-		}        
+        
 	}
 }
 
