@@ -12,11 +12,11 @@ h1 {
 }
 
 h2 {
-	font-size: 16px!important;
+	font-size: 12px!important;
 }
 
 h3 {
-	font-size: 14px!important;
+	font-size: 10px!important;
 }
 
 nav {
@@ -64,9 +64,7 @@ section {
 }
 
 #portfolio {
-	.portfolio-item {
-		display: none;
-	}
+	display: none;
 }	
 
 #about{
@@ -77,12 +75,12 @@ section {
 	display: none;
 }
 
-#skill, #work, #ref {
+#skill, #work, #ref, #project {
 	display: block;
 }
 
 .scroll-top{
-	display: none;
+	display: none!important;
 }
 
 #skill {
@@ -112,7 +110,7 @@ section {
 		}
 	}
 	
-	.close-modal {
+	.btn {
 		display: none;
 	}
 }

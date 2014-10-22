@@ -24,7 +24,7 @@ $brand-info: $brand-primary2;
 }
 @mixin box-shadow($size) {
 	@if $size == 'lg' {
-		box-shadow: 0 4px 10px rgba(0,0,0,.8);
+		box-shadow: 0 6px 12px rgba(0,0,0,.8);
 	} @else {
 		box-shadow: 0 4px 8px rgba(0,0,0,.5);
 	}
@@ -266,7 +266,7 @@ section.success {
 	}
 }
 
-#skill, #work, #ref {
+#skill, #work, #ref, #project {
 	display:none;
 }
 	
@@ -283,7 +283,7 @@ section.success {
 			
 			.portfolio-custom {
 				position: relative;
-				background-color: $brand-primary4;
+				background-color: lighten($brand-primary4, 10%);
 				max-width: 360px;
 				z-index: 1;
 				&> div {
@@ -321,6 +321,10 @@ section.success {
     }
 }
 
+blockquote footer {
+	color: #fff;
+}
+
 #contact {
 	.btn {
 		padding: 6px 40px;
@@ -351,6 +355,10 @@ footer {
 	.btn-social {
 		color: white;
 	}
+	.cc {
+		border-width:0; 
+		margin-right:5px;
+	} 
 }
 
 .btn-social {
