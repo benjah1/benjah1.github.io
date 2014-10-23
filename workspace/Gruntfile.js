@@ -30,6 +30,10 @@ module.exports = function (grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
+			jade: {
+				files: ['<%= config.app %>/{,*/}*.jade', '<%= config.app %>/data/{,*/}*.json'],
+				tasks: ['jade']
+			},
       bower: {
         files: ['bower.json'],
         tasks: ['wiredep']
@@ -378,7 +382,22 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
-    }
+    },
+		
+		jade: {
+			compile: {
+				options: {
+					pretty: true,
+					data: function(dest, scr) {
+						return require('./'+config.app+"/data/index.json");
+					}
+				},
+				files: {
+					"<%= config.app %>/index.html": "<%= config.app %>/index.jade"
+				}
+			}
+		}
+		
   });
 
 
