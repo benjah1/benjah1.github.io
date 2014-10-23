@@ -21,13 +21,13 @@
 			"projects" : [
 				{
 					"name": "LPA Ratings Tool, March 2011",
-					"desc": "Designed and implemented a survey-based web application; Created survey which supports conditional questions, instant saves and scoring system; Created a third party portal access for temporary legal counsels"
+					"desc": "Designed and implemented a survey-based web application, which supports conditional questions, instant saves, scoring system, and third party portal access for temporary legal counsels."
 				},{ 
 					"name": "GP Economics Application, October 2012",
-					"desc": "Designed and implemented a survey-based web application; Created a system of using excel file as an engine for massive excel formula and validation; Integrated Google chart for visual data analysis"
+					"desc": "Designed and implemented a survey-based web application with excel engine. It also integrated Google chart for visual data analysis."
 				},{
 					"name": "General Partner Profile, June 2013",
-					"desc": "Designed and implemented a international web application for members to manage and share their online portfolio; Integrated with Euclid's ClearVantage for desktop Association Management Software"
+					"desc": "Designed and implemented a international web online portfolio system which is integrated with Euclid's ClearVantage for desktop Association Management Software."
 				}
 			]
 		},
@@ -43,12 +43,11 @@
 			"projects": [
 				{
 					"name": "Rogers Raising the Grade, September 2012",
-					
 					"img": {
 						"src": "images/portfolio/rrtg-home.jpg",
 						"alt": "RRTG homepage"
 					},
-					"desc": "Implemented a national educational community with BuddyPress; Co-creator on e-learn modules; Integrated OpenBadge for proof of module completion; Integrated Fluidsurvey for annual youth survey; Integrated Google Analytics for advance tracking report",
+					"desc": "Implemented a national educational community with BuddyPress, and co-creator on e-learning modules. This project is also integrated with third party systems such as OpenBadge, Fluidsurvey and Google Analytics API.",
 					"url": "http://my.raisingthegrade.ca"
 				},{
 					"name": "School Cents Online Module, July 2014",
@@ -56,7 +55,7 @@
 						"src": "images/portfolio/rrtg-fl-home.jpg",
 						"alt": "RRTG School Cents Online Module homepage"
 					},
-					"desc": "Designed and implemented questionnaire e-learn module with Angular; Created animation framework"
+					"desc": "Designed and implemented highly interactive e-learning module with Angular."
 				}
 			]
 		},
@@ -76,7 +75,7 @@
 						"src": "images/portfolio/radii-2014-home.jpg",
 						"alt": "Radii 2014 homepage"
 					},
-					"desc": "Implemented business and bloging platform with WordPress 3.9.1; Converted default post content editor to user-friendly bootstrap-supported editor with <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>; Created <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr> compiler for default WordPress search and preformance",
+					"desc": "Implemented a business and bloging platform with WordPress 3.9.1. Created a highly user-friendly bootstrap-supported editor, which is pre-compiled and searchable, with <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>.",
 					"url": "http://goradii.com"
 				},{
 					"name": "Radii website 2011, November 2011",
@@ -84,10 +83,10 @@
 						"src": "images/portfolio/radii-2011-home.jpg",
 						"alt": "Radii 2011 homepage"
 					},
-					"desc": "Implemented business and bloging platform with WordPress 3.2.1; Created widget with dynamic manageable content"
+					"desc": "Implemented business and bloging platform with WordPress 3.2.1. Created widget with dynamic manageable content."
 				},{
 					"name": "Other",
-					"desc": "Created consolidated report with MSSQL"
+					"desc": "Created consolidated report with MSSQL."
 				}
 			]
 		},
@@ -102,14 +101,14 @@
 						"src": "images/portfolio/lahs-home.jpg",
 						"alt": "Life After High School homepage"
 					},
-					"desc": "Implemented python local web service for off-line conferences with special provided laptops"
+					"desc": "Implemented python local web service for off-line conferences with special provided laptops."
 				},{
 					"name": "Fortran Traffic",
 					"img": {
 						"src": "images/portfolio/ff-home.jpg",
 						"alt": "Fortran Traffic homepage"
 					},
-					"desc": "Created uploaded file management system in ColdFusion for client to manage file with page references"
+					"desc": "Created uploaded file management system in ColdFusion for client to manage file with page references."
 				}
 			]
 		},
@@ -124,7 +123,7 @@
 						"src": "images/portfolio/christsmas-2013-home.jpg",
 						"alt": "Christmas 2013 homepage"
 					},
-					"desc": "Created 3D holiday card with CSS3; Demonstrated the possibility of 3D model with animation on web",
+					"desc": "Created 3D holiday card with CSS3 and demonstrated the possibility of 3D model with animation on web",
 					"url": "http://benjah1.github.io/christmas2013"
 				},{
 					"name": "Android Apps",
@@ -132,7 +131,7 @@
 						"src": "images/portfolio/play-store.jpg",
 						"alt": "benjaminhuang on Play Store"
 					},
-					"desc": "Created HTML-based application with phoneGap for exercising; Created navtive JAVA-based applications with SDK for exercising"
+					"desc": "Created and published 7 Android applications of HTML-based with phoneGap or navtive JAVA-based with SDK for exercising"
 				}
 			]
 		}

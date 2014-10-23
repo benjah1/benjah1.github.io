@@ -92,7 +92,7 @@ html(lang='en')
             h2 Technical Skills
             hr.star-primary
         .row.print-push
-          each	val, index in skills
+          each val, index in skills
             .col-md-8.col-md-offset-1
               b #{index}
               span #{val}
@@ -156,9 +156,9 @@ html(lang='en')
                   if port.img
                     img.img-responsive(src='#{port.img.src}', alt='#{port.img.alt}')
                   each prj, j in port.projects
-                    h3 #{prj.name}
                     if prj.img
                       img.img-responsive(src='#{prj.img.src}', alt='#{prj.img.alt}')
+                    h3 #{prj.name}
                     p !{prj.desc}
                   footer
                     button.btn.btn-default.btn-lg(type='button', data-dismiss='modal')
