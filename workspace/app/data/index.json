@@ -1,0 +1,140 @@
+{
+	"skills" : {
+		"Languages" : "PHP (ZEND022796), JavaScript, CSS, Sass, SQL",
+		"Tools" : "Vagrant, Grunt, Yeoman, PHPunit, Mocha",
+		"Libraries" : "WordPress, Drupal, jQuery, Angular, Bootstrap"
+	},
+	
+	"portfolios" : [
+		{
+			"name" : "Institutional Limited Partners Association",
+			"logo" : {
+				"img": {
+					"src": "images/portfolio/ilpa.jpg",
+					"alt": "ILPA logo"
+				}
+			},
+			"img": {
+				"src":"images/portfolio/ilpa-home.jpg", 
+				"alt":"ILPA homepage" 
+			},
+			"projects" : [
+				{
+					"name": "LPA Ratings Tool, March 2011",
+					"desc": "Designed and implemented a survey-based web application; Created survey which supports conditional questions, instant saves and scoring system; Created a third party portal access for temporary legal counsels"
+				},{ 
+					"name": "GP Economics Application, October 2012",
+					"desc": "Designed and implemented a survey-based web application; Created a system of using excel file as an engine for massive excel formula and validation; Integrated Google chart for visual data analysis"
+				},{
+					"name": "General Partner Profile, June 2013",
+					"desc": "Designed and implemented a international web application for members to manage and share their online portfolio; Integrated with Euclid's ClearVantage for desktop Association Management Software"
+				}
+			]
+		},
+		
+		{
+			"name" : "Boys and Girls Clubs of Canada",
+			"logo" : {
+				"img": {
+					"src": "images/portfolio/bgcc.jpg",
+					"alt": "BGCC logo"
+				}
+			},
+			"projects": [
+				{
+					"name": "Rogers Raising the Grade, September 2012",
+					
+					"img": {
+						"src": "images/portfolio/rrtg-home.jpg",
+						"alt": "RRTG homepage"
+					},
+					"desc": "Implemented a national educational community with BuddyPress; Co-creator on e-learn modules; Integrated OpenBadge for proof of module completion; Integrated Fluidsurvey for annual youth survey; Integrated Google Analytics for advance tracking report",
+					"url": "http://my.raisingthegrade.ca"
+				},{
+					"name": "School Cents Online Module, July 2014",
+					"img": {
+						"src": "images/portfolio/rrtg-fl-home.jpg",
+						"alt": "RRTG School Cents Online Module homepage"
+					},
+					"desc": "Designed and implemented questionnaire e-learn module with Angular; Created animation framework"
+				}
+			]
+		},
+		
+		{
+			"name": "Radii Production",
+			"logo" : {
+				"img": {
+					"src": "images/portfolio/radii.jpg",
+					"alt": "Radii logo"
+				}
+			},
+			"projects": [
+				{
+					"name": "Radii website 2014, September 2014",
+					"img": {
+						"src": "images/portfolio/radii-2014-home.jpg",
+						"alt": "Radii 2014 homepage"
+					},
+					"desc": "Implemented business and bloging platform with WordPress 3.9.1; Converted default post content editor to user-friendly bootstrap-supported editor with <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>; Created <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr> compiler for default WordPress search and preformance",
+					"url": "http://goradii.com"
+				},{
+					"name": "Radii website 2011, November 2011",
+					"img": {
+						"src": "images/portfolio/radii-2011-home.jpg",
+						"alt": "Radii 2011 homepage"
+					},
+					"desc": "Implemented business and bloging platform with WordPress 3.2.1; Created widget with dynamic manageable content"
+				},{
+					"name": "Other",
+					"desc": "Created consolidated report with MSSQL"
+				}
+			]
+		},
+		
+		{
+			"name": "Other Project",
+			"logo": false,
+			"projects": [
+				{
+					"name": "Life After High School",
+					"img": {
+						"src": "images/portfolio/lahs-home.jpg",
+						"alt": "Life After High School homepage"
+					},
+					"desc": "Implemented python local web service for off-line conferences with special provided laptops"
+				},{
+					"name": "Fortran Traffic",
+					"img": {
+						"src": "images/portfolio/ff-home.jpg",
+						"alt": "Fortran Traffic homepage"
+					},
+					"desc": "Created uploaded file management system in ColdFusion for client to manage file with page references"
+				}
+			]
+		},
+		
+		{
+			"name": "Personal Project",
+			"logo": false,
+			"projects": [
+				{
+					"name": "Christmas Card series",
+					"img": {
+						"src": "images/portfolio/christsmas-2013-home.jpg",
+						"alt": "Christmas 2013 homepage"
+					},
+					"desc": "Created 3D holiday card with CSS3; Demonstrated the possibility of 3D model with animation on web",
+					"url": "http://benjah1.github.io/christmas2013"
+				},{
+					"name": "Android Apps",
+					"img": {
+						"src": "images/portfolio/play-store.jpg",
+						"alt": "benjaminhuang on Play Store"
+					},
+					"desc": "Created HTML-based application with phoneGap for exercising; Created navtive JAVA-based applications with SDK for exercising"
+				}
+			]
+		}
+	]
+}
