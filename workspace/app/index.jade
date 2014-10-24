@@ -84,18 +84,30 @@ html(lang='en')
               | &nbsp;or&nbsp;
               a.btn.btn-info.btn-lg(target='_blank', href='/Resume.pdf') Resume.pdf 
     //
+       Summery Grid Section 
+    section#summary
+      .container
+        .row
+          .col-md-12
+            h2 Objective
+        .row.print-push
+          .col-md-12
+            p To obtain a PHP and forntend developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career.
+
+    //
        Skill Grid Section 
     section#skill
       .container
         .row
-          .col-md-12.text-center
+          .col-md-12
             h2 Technical Skills
             hr.star-primary
         .row.print-push
-          each val, index in skills
-            .col-md-8.col-md-offset-1
-              b #{index}
-              span #{val}
+          .col-md-12
+            each val, index in skills
+              p
+                b #{index}
+                | #{val}
     
     //
       Work Grid Section 
@@ -113,10 +125,9 @@ html(lang='en')
               li Server management and shell scripting
               li Technical research
               li Documentation
+
     //
       Portfolio Grid Section 
-      
-      
     section#portfolio
       .container
         .row
@@ -125,7 +136,7 @@ html(lang='en')
             hr.star-primary
         .row
           each port, i in portfolios
-            .col-sm-6.col-md-4.portfolio-item
+            .col-sm-6.col-md-4.portfolio-item(id="portfolio-modal#{i}")
               a.portfolio-link(href='#portfolioModal#{i}', data-toggle='modal')
                 if port.logo
                   img.img-responsive(src='#{port.logo.img.src}', alt='#{port.logo.img.alt}')
@@ -147,7 +158,7 @@ html(lang='en')
       div.portfolio-modal.modal.fade(id='portfolioModal#{i}',tabindex='-1', role='dialog', aria-hidden='true')
         .modal-content
           .container
-            .row
+            .row.print-push
               .col-md-8.col-md-offset-1
                   button.btn.btn-default.pull-right(type='button', data-dismiss='modal')
                     i.fa.fa-times
@@ -159,11 +170,36 @@ html(lang='en')
                     if prj.img
                       img.img-responsive(src='#{prj.img.src}', alt='#{prj.img.alt}')
                     h3 #{prj.name}
-                    p !{prj.desc}
+                    p
+                      b #{prj.name}
+                      |. 
+                      !{prj.desc}
                   footer
                     button.btn.btn-default.btn-lg(type='button', data-dismiss='modal')
                       i.fa.fa-times
                       | Close
+
+    //
+      About Section 
+    section#about.success
+      .container
+        .row
+          .col-md-12.text-center
+            h2 About
+            hr.star-light
+        .row
+          .col-md-10.col-md-offset-1
+            h3
+              | Zhibin specializes in how data is presented and collected between servers and browsers.
+          .col-md-10.col-md-offset-1
+            blockquote
+              p
+                | Bad programmers worry about the code. Good programmers worry about data structures and their relationships.
+              footer
+                cite(title='Linus Torvalds') Linus Torvalds
+          .col-md-10.col-md-offset-1
+            p
+              | Zhibin believes that good data structures generates good code, and the same applies to web. Zhibin's passion is to continue to learn and understand more complex data structures, so he can deliver more simplified and elegant front-end solutions that are intuitive scalable and easy to maintain.
 
     //
        References Grid Section 

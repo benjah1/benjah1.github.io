@@ -14,7 +14,8 @@
     <meta property="og:url" content="http://benjah1.github.io/">
     <meta property="og:site_name" content="Zhibin Huang - PHP Web developer in Toronto">
     <meta name="author" content="benjah1">
-    <title>Zhibin Huang - PHP Web developer in Toronto</title><!-- build:css(.) styles/vendor.css -->
+    <title>Zhibin Huang - PHP Web developer in Toronto</title>
+    <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
@@ -73,20 +74,38 @@
         </div>
       </div>
     </header>
+    <!--Summery Grid Section 
+    -->
+    <section id="summary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Objective</h2>
+          </div>
+        </div>
+        <div class="row print-push">
+          <div class="col-md-12">
+            <p>To obtain a PHP and forntend developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--Skill Grid Section 
     -->
     <section id="skill">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 text-center">
+          <div class="col-md-12">
             <h2>Technical Skills</h2>
             <hr class="star-primary">
           </div>
         </div>
         <div class="row print-push">
-          <div class="col-md-8 col-md-offset-1"><b>Languages</b><span>PHP (ZEND022796), JavaScript, CSS, Sass, SQL</span></div>
-          <div class="col-md-8 col-md-offset-1"><b>Tools</b><span>Vagrant, Grunt, Yeoman, PHPunit, Mocha</span></div>
-          <div class="col-md-8 col-md-offset-1"><b>Libraries</b><span>WordPress, Drupal, jQuery, Angular, Bootstrap</span></div>
+          <div class="col-md-12">
+            <p><b>Languages</b>PHP (ZEND022796), JavaScript, CSS, Sass, SQL</p>
+            <p><b>Tools</b>Vagrant, Grunt, Yeoman, JSLint, Jade, PHPunit, Mocha</p>
+            <p><b>Libraries</b>WordPress, Drupal, jQuery, Angular, Bootstrap</p>
+          </div>
         </div>
       </div>
     </section>
@@ -113,10 +132,7 @@
         </div>
       </div>
     </section>
-    <!--
-    Portfolio Grid Section 
-    
-    
+    <!--Portfolio Grid Section 
     -->
     <section id="portfolio">
       <div class="container">
@@ -127,19 +143,19 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal0" data-toggle="modal" class="portfolio-link"><img src="images/portfolio/ilpa.jpg" alt="ILPA logo" class="img-responsive"></a></div>
-          <div class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal1" data-toggle="modal" class="portfolio-link"><img src="images/portfolio/bgcc.jpg" alt="BGCC logo" class="img-responsive"></a></div>
-          <div class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal2" data-toggle="modal" class="portfolio-link"><img src="images/portfolio/radii.jpg" alt="Radii logo" class="img-responsive"></a></div>
-          <div class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal3" data-toggle="modal" class="portfolio-link">
+          <div id="portfolio-modal0" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal0" data-toggle="modal" class="portfolio-link"><img src="images/portfolio/ilpa.jpg" alt="ILPA logo" class="img-responsive"></a></div>
+          <div id="portfolio-modal1" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal1" data-toggle="modal" class="portfolio-link"><img src="images/portfolio/bgcc.jpg" alt="BGCC logo" class="img-responsive"></a></div>
+          <div id="portfolio-modal2" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal2" data-toggle="modal" class="portfolio-link"><img src="images/portfolio/radii.jpg" alt="Radii logo" class="img-responsive"></a></div>
+          <div id="portfolio-modal3" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal3" data-toggle="modal" class="portfolio-link">
               <div class="portfolio-custom">
                 <div>
                   <div>Other Project</div>
                 </div><img src="images/portfolio/custom.jpg" alt="placeholder image" class="img-responsive">
               </div></a></div>
-          <div class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal4" data-toggle="modal" class="portfolio-link">
+          <div id="portfolio-modal4" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal4" data-toggle="modal" class="portfolio-link">
               <div class="portfolio-custom">
                 <div>
-                  <div>Personal Project</div>
+                  <div>Personal Experience</div>
                 </div><img src="images/portfolio/custom.jpg" alt="placeholder image" class="img-responsive">
               </div></a></div>
         </div>
@@ -160,17 +176,23 @@
     <div id="portfolioModal0" tabindex="-1" role="dialog" aria-hidden="true" class="portfolio-modal modal fade">
       <div class="modal-content">
         <div class="container">
-          <div class="row">
+          <div class="row print-push">
             <div class="col-md-8 col-md-offset-1">
               <button type="button" data-dismiss="modal" class="btn btn-default pull-right"><i class="fa fa-times"></i></button>
               <h2>Institutional Limited Partners Association</h2>
               <hr class="break"><img src="images/portfolio/ilpa-home.jpg" alt="ILPA homepage" class="img-responsive">
-              <h3>LPA Ratings Tool, March 2011</h3>
-              <p>Designed and implemented a survey-based web application, which supports conditional questions, instant saves, scoring system, and third party portal access for temporary legal counsels.</p>
-              <h3>GP Economics Application, October 2012</h3>
-              <p>Designed and implemented a survey-based web application with excel engine. It also integrated Google chart for visual data analysis.</p>
-              <h3>General Partner Profile, June 2013</h3>
-              <p>Designed and implemented a international web online portfolio system which is integrated with Euclid's ClearVantage for desktop Association Management Software.</p>
+              <h3>LPA Ratings Tool, 2011</h3>
+              <p><b>LPA Ratings Tool, 2011</b>. 
+                Designed and implemented a survey-based web application, which supports conditional questions, instant saves, scoring system, and third party portal access for temporary legal counsels.
+              </p>
+              <h3>GP Economics Application, 2012</h3>
+              <p><b>GP Economics Application, 2012</b>. 
+                Designed and implemented a survey-based web application with excel engine. It also integrated Google chart for visual data analysis.
+              </p>
+              <h3>General Partner Profile, 2013</h3>
+              <p><b>General Partner Profile, 2013</b>. 
+                Designed and implemented a international web online portfolio system which is integrated with Euclid's ClearVantage for desktop Association Management Software.
+              </p>
               <footer>
                 <button type="button" data-dismiss="modal" class="btn btn-default btn-lg"><i class="fa fa-times"></i>Close</button>
               </footer>
@@ -182,15 +204,19 @@
     <div id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" class="portfolio-modal modal fade">
       <div class="modal-content">
         <div class="container">
-          <div class="row">
+          <div class="row print-push">
             <div class="col-md-8 col-md-offset-1">
               <button type="button" data-dismiss="modal" class="btn btn-default pull-right"><i class="fa fa-times"></i></button>
               <h2>Boys and Girls Clubs of Canada</h2>
               <hr class="break"><img src="images/portfolio/rrtg-home.jpg" alt="RRTG homepage" class="img-responsive">
-              <h3>Rogers Raising the Grade, September 2012</h3>
-              <p>Implemented a national educational community with BuddyPress, and co-creator on e-learning modules. This project is also integrated with third party systems such as OpenBadge, Fluidsurvey and Google Analytics API.</p><img src="images/portfolio/rrtg-fl-home.jpg" alt="RRTG School Cents Online Module homepage" class="img-responsive">
-              <h3>School Cents Online Module, July 2014</h3>
-              <p>Designed and implemented highly interactive e-learning module with Angular.</p>
+              <h3>Rogers Raising the Grade, 2012</h3>
+              <p><b>Rogers Raising the Grade, 2012</b>. 
+                Implemented a national educational community with BuddyPress, and co-creator on e-learning modules. This project is also integrated with third party systems such as OpenBadge, Fluidsurvey and Google Analytics API.
+              </p><img src="images/portfolio/rrtg-fl-home.jpg" alt="RRTG School Cents Online Module homepage" class="img-responsive">
+              <h3>School Cents Online Module, 2014</h3>
+              <p><b>School Cents Online Module, 2014</b>. 
+                Designed and implemented highly interactive e-learning module with Angular.
+              </p>
               <footer>
                 <button type="button" data-dismiss="modal" class="btn btn-default btn-lg"><i class="fa fa-times"></i>Close</button>
               </footer>
@@ -202,17 +228,23 @@
     <div id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" class="portfolio-modal modal fade">
       <div class="modal-content">
         <div class="container">
-          <div class="row">
+          <div class="row print-push">
             <div class="col-md-8 col-md-offset-1">
               <button type="button" data-dismiss="modal" class="btn btn-default pull-right"><i class="fa fa-times"></i></button>
               <h2>Radii Production</h2>
               <hr class="break"><img src="images/portfolio/radii-2014-home.jpg" alt="Radii 2014 homepage" class="img-responsive">
-              <h3>Radii website 2014, September 2014</h3>
-              <p>Implemented a business and bloging platform with WordPress 3.9.1. Created a highly user-friendly bootstrap-supported editor, which is pre-compiled and searchable, with <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>.</p><img src="images/portfolio/radii-2011-home.jpg" alt="Radii 2011 homepage" class="img-responsive">
-              <h3>Radii website 2011, November 2011</h3>
-              <p>Implemented business and bloging platform with WordPress 3.2.1. Created widget with dynamic manageable content.</p>
+              <h3>Radii website, 2014</h3>
+              <p><b>Radii website, 2014</b>. 
+                Implemented a business and bloging platform with WordPress 3.9.1. Created a highly user-friendly bootstrap-supported editor, which is pre-compiled and searchable, with <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>.
+              </p><img src="images/portfolio/radii-2011-home.jpg" alt="Radii 2011 homepage" class="img-responsive">
+              <h3>Radii website, 2011</h3>
+              <p><b>Radii website, 2011</b>. 
+                Implemented business and bloging platform with WordPress 3.2.1. Created widget with dynamic manageable content.
+              </p>
               <h3>Other</h3>
-              <p>Created consolidated report with MSSQL.</p>
+              <p><b>Other</b>. 
+                Created consolidated report with MSSQL.
+              </p>
               <footer>
                 <button type="button" data-dismiss="modal" class="btn btn-default btn-lg"><i class="fa fa-times"></i>Close</button>
               </footer>
@@ -224,15 +256,19 @@
     <div id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" class="portfolio-modal modal fade">
       <div class="modal-content">
         <div class="container">
-          <div class="row">
+          <div class="row print-push">
             <div class="col-md-8 col-md-offset-1">
               <button type="button" data-dismiss="modal" class="btn btn-default pull-right"><i class="fa fa-times"></i></button>
               <h2>Other Project</h2>
               <hr class="break"><img src="images/portfolio/lahs-home.jpg" alt="Life After High School homepage" class="img-responsive">
-              <h3>Life After High School</h3>
-              <p>Implemented python local web service for off-line conferences with special provided laptops.</p><img src="images/portfolio/ff-home.jpg" alt="Fortran Traffic homepage" class="img-responsive">
-              <h3>Fortran Traffic</h3>
-              <p>Created uploaded file management system in ColdFusion for client to manage file with page references.</p>
+              <h3>Life After High School, 2013</h3>
+              <p><b>Life After High School, 2013</b>. 
+                Implemented python local web service for off-line conferences with special provided laptops.
+              </p><img src="images/portfolio/ff-home.jpg" alt="Fortran Traffic homepage" class="img-responsive">
+              <h3>Fortran Traffic, 2011</h3>
+              <p><b>Fortran Traffic, 2011</b>. 
+                Created uploaded file management system in ColdFusion for client to manage file with page references.
+              </p>
               <footer>
                 <button type="button" data-dismiss="modal" class="btn btn-default btn-lg"><i class="fa fa-times"></i>Close</button>
               </footer>
@@ -244,15 +280,23 @@
     <div id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" class="portfolio-modal modal fade">
       <div class="modal-content">
         <div class="container">
-          <div class="row">
+          <div class="row print-push">
             <div class="col-md-8 col-md-offset-1">
               <button type="button" data-dismiss="modal" class="btn btn-default pull-right"><i class="fa fa-times"></i></button>
-              <h2>Personal Project</h2>
+              <h2>Personal Experience</h2>
               <hr class="break"><img src="images/portfolio/christsmas-2013-home.jpg" alt="Christmas 2013 homepage" class="img-responsive">
-              <h3>Christmas Card series</h3>
-              <p>Created 3D holiday card with CSS3 and demonstrated the possibility of 3D model with animation on web</p><img src="images/portfolio/play-store.jpg" alt="benjaminhuang on Play Store" class="img-responsive">
+              <h3>Christmas Card series, 2010 - Present</h3>
+              <p><b>Christmas Card series, 2010 - Present</b>. 
+                Creating 3D holiday card with CSS3 to demonstrate 3D model with animation in HTML
+              </p><img src="images/portfolio/play-store.jpg" alt="benjaminhuang on Play Store" class="img-responsive">
               <h3>Android Apps</h3>
-              <p>Created and published 7 Android applications of HTML-based with phoneGap or navtive JAVA-based with SDK for exercising</p>
+              <p><b>Android Apps</b>. 
+                Created and published 7 Android applications of HTML-based with phoneGap or navtive JAVA-based with SDK for exercising
+              </p>
+              <h3>Events Organizer, 2014 - Present</h3>
+              <p><b>Events Organizer, 2014 - Present</b>. 
+                Organizing study/hangout events on a weekly basis in a Chinese programmers community.
+              </p>
               <footer>
                 <button type="button" data-dismiss="modal" class="btn btn-default btn-lg"><i class="fa fa-times"></i>Close</button>
               </footer>
@@ -261,6 +305,34 @@
         </div>
       </div>
     </div>
+    <!--About Section 
+    -->
+    <section id="about" class="success">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>About</h2>
+            <hr class="star-light">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h3>Zhibin specializes in how data is presented and collected between servers and browsers.</h3>
+          </div>
+          <div class="col-md-10 col-md-offset-1">
+            <blockquote>
+              <p>Bad programmers worry about the code. Good programmers worry about data structures and their relationships.</p>
+              <footer>
+                <cite title="Linus Torvalds">Linus Torvalds</cite>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="col-md-10 col-md-offset-1">
+            <p>Zhibin believes that good data structures generates good code, and the same applies to web. Zhibin's passion is to continue to learn and understand more complex data structures, so he can deliver more simplified and elegant front-end solutions that are intuitive scalable and easy to maintain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--References Grid Section 
     -->
     <section id="ref">
@@ -320,7 +392,8 @@
     </footer>
     <!--Scroll to Top Button (Only visible on small and extra-small screen sizes) 
     -->
-    <div class="scroll-top page-scroll visible-xs visble-sm"><a href="#page-top" class="btn btn-info"><i class="fa fa-chevron-up"></i></a></div><!-- build:js(.) scripts/vendor.js -->
+    <div class="scroll-top page-scroll visible-xs visble-sm"><a href="#page-top" class="btn btn-info"><i class="fa fa-chevron-up"></i></a></div>
+    <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>

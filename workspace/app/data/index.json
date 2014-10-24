@@ -1,7 +1,7 @@
 {
 	"skills" : {
 		"Languages" : "PHP (ZEND022796), JavaScript, CSS, Sass, SQL",
-		"Tools" : "Vagrant, Grunt, Yeoman, PHPunit, Mocha",
+		"Tools" : "Vagrant, Grunt, Yeoman, JSLint, Jade, PHPunit, Mocha",
 		"Libraries" : "WordPress, Drupal, jQuery, Angular, Bootstrap"
 	},
 	
@@ -20,13 +20,13 @@
 			},
 			"projects" : [
 				{
-					"name": "LPA Ratings Tool, March 2011",
+					"name": "LPA Ratings Tool, 2011",
 					"desc": "Designed and implemented a survey-based web application, which supports conditional questions, instant saves, scoring system, and third party portal access for temporary legal counsels."
 				},{ 
-					"name": "GP Economics Application, October 2012",
+					"name": "GP Economics Application, 2012",
 					"desc": "Designed and implemented a survey-based web application with excel engine. It also integrated Google chart for visual data analysis."
 				},{
-					"name": "General Partner Profile, June 2013",
+					"name": "General Partner Profile, 2013",
 					"desc": "Designed and implemented a international web online portfolio system which is integrated with Euclid's ClearVantage for desktop Association Management Software."
 				}
 			]
@@ -42,7 +42,7 @@
 			},
 			"projects": [
 				{
-					"name": "Rogers Raising the Grade, September 2012",
+					"name": "Rogers Raising the Grade, 2012",
 					"img": {
 						"src": "images/portfolio/rrtg-home.jpg",
 						"alt": "RRTG homepage"
@@ -50,7 +50,7 @@
 					"desc": "Implemented a national educational community with BuddyPress, and co-creator on e-learning modules. This project is also integrated with third party systems such as OpenBadge, Fluidsurvey and Google Analytics API.",
 					"url": "http://my.raisingthegrade.ca"
 				},{
-					"name": "School Cents Online Module, July 2014",
+					"name": "School Cents Online Module, 2014",
 					"img": {
 						"src": "images/portfolio/rrtg-fl-home.jpg",
 						"alt": "RRTG School Cents Online Module homepage"
@@ -70,7 +70,7 @@
 			},
 			"projects": [
 				{
-					"name": "Radii website 2014, September 2014",
+					"name": "Radii website, 2014",
 					"img": {
 						"src": "images/portfolio/radii-2014-home.jpg",
 						"alt": "Radii 2014 homepage"
@@ -78,7 +78,7 @@
 					"desc": "Implemented a business and bloging platform with WordPress 3.9.1. Created a highly user-friendly bootstrap-supported editor, which is pre-compiled and searchable, with <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>.",
 					"url": "http://goradii.com"
 				},{
-					"name": "Radii website 2011, November 2011",
+					"name": "Radii website, 2011",
 					"img": {
 						"src": "images/portfolio/radii-2011-home.jpg",
 						"alt": "Radii 2011 homepage"
@@ -96,14 +96,14 @@
 			"logo": false,
 			"projects": [
 				{
-					"name": "Life After High School",
+					"name": "Life After High School, 2013",
 					"img": {
 						"src": "images/portfolio/lahs-home.jpg",
 						"alt": "Life After High School homepage"
 					},
 					"desc": "Implemented python local web service for off-line conferences with special provided laptops."
 				},{
-					"name": "Fortran Traffic",
+					"name": "Fortran Traffic, 2011",
 					"img": {
 						"src": "images/portfolio/ff-home.jpg",
 						"alt": "Fortran Traffic homepage"
@@ -114,16 +114,16 @@
 		},
 		
 		{
-			"name": "Personal Project",
+			"name": "Personal Experience",
 			"logo": false,
 			"projects": [
 				{
-					"name": "Christmas Card series",
+					"name": "Christmas Card series, 2010 - Present",
 					"img": {
 						"src": "images/portfolio/christsmas-2013-home.jpg",
 						"alt": "Christmas 2013 homepage"
 					},
-					"desc": "Created 3D holiday card with CSS3 and demonstrated the possibility of 3D model with animation on web",
+					"desc": "Creating 3D holiday card with CSS3 to demonstrate 3D model with animation in HTML",
 					"url": "http://benjah1.github.io/christmas2013"
 				},{
 					"name": "Android Apps",
@@ -132,6 +132,9 @@
 						"alt": "benjaminhuang on Play Store"
 					},
 					"desc": "Created and published 7 Android applications of HTML-based with phoneGap or navtive JAVA-based with SDK for exercising"
+				},{
+					"name": "Events Organizer, 2014 - Present",
+					"desc": "Organizing study/hangout events on a weekly basis in a Chinese programmers community."
 				}
 			]
 		}
