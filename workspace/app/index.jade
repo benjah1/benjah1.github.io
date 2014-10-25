@@ -92,7 +92,7 @@ html(lang='en')
             h2 Objective
         .row.print-push
           .col-md-12
-            p To obtain a PHP and forntend developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career.
+            p To obtain a PHP and frontend developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career.
 
     //
        Skill Grid Section 
@@ -108,6 +108,7 @@ html(lang='en')
               p
                 b #{index}
                 | #{val}
+            p Familiar with various algorithms and design patterns.
     
     //
       Work Grid Section 
@@ -167,13 +168,32 @@ html(lang='en')
                   if port.img
                     img.img-responsive(src='#{port.img.src}', alt='#{port.img.alt}')
                   each prj, j in port.projects
-                    if prj.img
-                      img.img-responsive(src='#{prj.img.src}', alt='#{prj.img.alt}')
-                    h3 #{prj.name}
-                    p
-                      b #{prj.name}
-                      |. 
-                      !{prj.desc}
+                    if prj.print
+                      div(class="#{prj.print}")
+                        h3 #{prj.name}
+                        if prj.url
+                          a(class="url-link",href="#{prj.url}",target="_blank")
+                            i.fa.fa-link
+                            | &nbsp;#{prj.url}
+                        p
+                          b #{prj.name}
+                            |. 
+                          !{prj.desc}
+                        if prj.img
+                          img.img-responsive(src='#{prj.img.src}', alt='#{prj.img.alt}')
+                    else
+                      div
+                        h3 #{prj.name}
+                        if prj.url
+                          a(class="url-link",href="#{prj.url}",target="_blank")
+                            i.fa.fa-link
+                            | &nbsp;#{prj.url}
+                        p
+                          b #{prj.name}
+                            |. 
+                          !{prj.desc}
+                        if prj.img
+                          img.img-responsive(src='#{prj.img.src}', alt='#{prj.img.alt}')
                   footer
                     button.btn.btn-default.btn-lg(type='button', data-dismiss='modal')
                       i.fa.fa-times
