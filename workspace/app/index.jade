@@ -93,7 +93,8 @@ html(lang='en')
             h2 Objective
         .row.print-push
           .col-md-12
-            p To obtain a PHP and frontend developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career.
+            each text, i in objective
+              p(class='#{i}') #{text}
 
     //
        Skill Grid Section 
@@ -109,7 +110,6 @@ html(lang='en')
               p
                 b #{index}
                 | #{val}
-            p Familiar with various algorithms and design patterns.
     
     //
       Work Grid Section 
@@ -267,17 +267,7 @@ html(lang='en')
           .row
             .col-md-10.col-md-offset-1
               small
-                a(rel='license', href='http://creativecommons.org/licenses/by-nc/3.0/deed.en_US')
-                  img.cc(alt='Creative Commons License', src='http://i.creativecommons.org/l/by-nc/3.0/80x15.png')
-                span(xmlns:dct='http://purl.org/dc/terms/', property='dct:title')
-                  i Zhibin Huang
-                | by
-                a(xmlns:cc='http://creativecommons.org/ns#', href='http://github.com/benjah1', property='cc:attributionName', rel='cc:attributionURL') benjah1
-                | is licensed under a
-                a(rel='license', href='http://creativecommons.org/licenses/by-nc/3.0/deed.en_US') Creative Commons Attribution-NonCommercial 3.0 Unported License
-                | . Links to third-party sites are not included under this Creative Commons License. Please contact Support at
-                a(href='mailto:benjaminhuang1@gmail.com') benjaminhuang1@gmail.com
-                | for more information.
+                | <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" class="cc"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><i>Zhibin Huang</i></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://github.com/benjah1" property="cc:attributionName" rel="cc:attributionURL">benjah1</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>. Links to third-party sites are not included under this Creative Commons License. Please contact Support at <a href="mailto:benjaminhuang1@gmail.com">benjaminhuang1@gmail.com</a> for more information.
     //
        Scroll to Top Button (Only visible on small and extra-small screen sizes) 
     .scroll-top.page-scroll.visible-xs.visble-sm

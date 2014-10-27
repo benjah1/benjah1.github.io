@@ -1,8 +1,14 @@
 {
+	"objective": {
+		"php" : "To obtain a PHP developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career.",
+		"frontend" : "To obtain a frontend developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career."
+	},
 	"skills" : {
-		"Languages" : "PHP (ZEND022796), JavaScript, CSS, Sass, SQL, Regex",
-		"Tools" : "Git, Vagrant, Grunt, Yeoman, Bower, JSLint, Jade, PHPunit, Mocha",
-		"Libraries" : "WordPress, jQuery, Angular, Bootstrap"
+		"Languages" : "PHP (ZEC, ZEND022796), JavaScript, ActionScript, HTML5, CSS3, Sass, SQL, Regex, JSON, XML",
+		"Tools" : "Git, Vagrant, Grunt, Yeoman, Bower, JSLint, Jade, PHPunit, Various browser debugging tools",
+		"Libraries" : "WordPress, jQuery, Angular, Bootstrap",
+		"Patterns": "Responsive Design, Singleton, Factory, Adapter, Chain of Responsibility, Observer and etc.",
+		"Algorithms" : "Quick sort, Topological sort, DFS, BFS and etc."
 	},
 	
 	"portfolios" : [
@@ -28,12 +34,12 @@
 				},{
 					"name": "General Partner Profile, 2013",
 					"desc": "An international online business portfolio network which is integrated with Euclid's ClearVantage (desktop Association Management Software). It is used by thousands of paid members.",
-          "print": "not-print"
+					"print": "not-print"
 				}
 			],
-      "source" : [
-        "http://ilpa.org/wp-content/uploads/2009/08/ILPA-New-Member-Brochure.pdf"
-      ]
+			"source" : [
+				"http://ilpa.org/wp-content/uploads/2009/08/ILPA-New-Member-Brochure.pdf"
+			]
 		},
 		
 		{
@@ -88,7 +94,7 @@
 						"alt": "Radii 2011 homepage"
 					},
 					"desc": "A business and bloging platform with WordPress 3.2.1. Created widget with dynamic manageable content.",
-          "print" : "not-print"
+					"print" : "not-print"
 				},{
 					"name": "Data mining",
 					"desc": "Created various consolidated reports with log files, PHP, Mysql, or MSSQL."
@@ -114,7 +120,7 @@
 						"alt": "Fortran Traffic homepage"
 					},
 					"desc": "Created uploaded files management system in ColdFusion.",
-          "print": "not-print"
+					"print": "not-print"
 				}
 			]
 		},
@@ -129,7 +135,7 @@
 						"src": "images/portfolio/christsmas-2013-home.jpg",
 						"alt": "Christmas 2013 homepage"
 					},
-					"desc": "Building 3D holiday card with CCS3 such as transform, transition and animation to demonstrate 3D modelling with animation in HTML.",
+					"desc": "Building 3D holiday card with CSS3 such as transform, transition and animation to demonstrate 3D modelling with animation in HTML.",
 					"url": "http://benjah1.github.io/christmas2013"
 				},{
 					"name": "Android Apps",

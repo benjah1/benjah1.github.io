@@ -60,11 +60,19 @@ header {
     .skills {
       display: none;
     }
+		span.email {
+			display: inline;
+		}
+		span.number {
+			display: inline;
+			margin-left: 10px;
+		}
 		.resume {
 			display: none;
 		}
 	}
 }
+
 
 section {
 	padding: 0;
@@ -143,7 +151,12 @@ section {
 		display: none;
 	}
 }
-
+.modal-open {
+	overflow: auto;
+}
+.modal-backdrop {
+	display: none;
+}
 footer {
 	display: none;
 }

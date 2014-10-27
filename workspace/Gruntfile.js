@@ -388,12 +388,12 @@ module.exports = function (grunt) {
 			compile: {
 				options: {
 					pretty: true,
-					data: function(dest, scr) {
-						return require('./'+config.app+"/data/index.json");
+					data: function() {
+						return require('./'+config.app+'/data/index.json');
 					}
 				},
 				files: {
-					"<%= config.app %>/index.html": "<%= config.app %>/index.jade"
+					'<%= config.app %>/index.html': '<%= config.app %>/index.jade'
 				}
 			}
 		}
