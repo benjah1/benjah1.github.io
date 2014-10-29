@@ -38,13 +38,12 @@ html(lang='en')
     //if lt IE 9
       script(async='async', src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
       script(async='async', src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+
   body#page-top.index
     //
        Navigation 
     nav.navbar.navbar-default.navbar-fixed-top
       .container
-        //
-           Brand and toggle get grouped for better mobile display 
         .navbar-header.page-scroll
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
             span.sr-only Toggle navigation
@@ -52,22 +51,15 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
           a.navbar-brand(href='#page-top') Zhibin Huang
-        //
-           Collect the nav links, forms, and other content for toggling 
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             li.hidden
               a(href='#page-top')
             li.page-scroll
-              a(href='#portfolio') Portfolio
+              a(href='#',onclick='window.print();') Print Resume
             li.page-scroll
-              a(href='#about') About
-            li.page-scroll
-              a(href='#contact') Contact
-        //
-           /.navbar-collapse 
-      //
-         /.container-fluid 
+              a(target='_blank', href='/Resume.pdf') Resume.pdf
+
     //
        Header 
     header
@@ -75,15 +67,15 @@ html(lang='en')
         .row
           .col-md-12
             img.img-responsive.img-circle(src='images/profile.jpg', alt='Headshot of Zhibin Huang')
+            h1.name Zhibin Huang
             .intro-text
-              h1.name Zhibin Huang
-              hr.star-light
               span.skills Web Developer - Full Stack - Toronto, ON #{index}
               span.email.print-only benjaminhuang1@gmail.com
             .resume
-              a.btn.btn-info.btn-lg(onclick='window.print();') Print Resume
+              a.btn.btn-primary.btn-lg(onclick='window.print();') Print Resume
               | &nbsp;or&nbsp;
-              a.btn.btn-info.btn-lg(target='_blank', href='/Resume.pdf') Resume.pdf 
+              a.btn.btn-primary.btn-lg(target='_blank', href='/Resume.pdf') Resume.pdf
+
     //
        Summery Grid Section 
     section#summary
@@ -103,7 +95,6 @@ html(lang='en')
         .row
           .col-md-12
             h2 Technical Skills
-            hr.star-primary
         .row.print-push
           .col-md-12
             each val, index in skills
@@ -118,7 +109,6 @@ html(lang='en')
         .row
           .col-md-12.text-center
             h2 Work Experience
-            hr.star-primary
         .row.print-push
           .col-md-8.col-md-offset-1
             h3 Radii Production, 2010 - 2014
@@ -127,15 +117,28 @@ html(lang='en')
               li Server management and shell scripting
               li Technical research
               li Documentation
+    //
+      About Section 
+    section#about
+      .container
+        .row
+          .col-md-10.col-md-offset-1
+            h3
+              | Zhibin specializes in how data is presented and collected between servers and browsers.
+          .col-md-10.col-md-offset-1
+            blockquote
+              p
+                | Bad programmers worry about the code. Good programmers worry about data structures and their relationships.
+              footer
+                cite(title='Linus Torvalds') Linus Torvalds
+          .col-md-10.col-md-offset-1
+            p
+              | Zhibin believes that good data structures generates good code, and the same applies to web. Zhibin's passion is to continue to learn and understand more complex data structures, so he can deliver more simplified and elegant front-end solutions that are intuitive scalable and easy to maintain.
 
     //
       Portfolio Grid Section 
     section#portfolio
       .container
-        .row
-          .col-md-12.text-center
-            h2 Portfolio
-            hr.star-primary
         .row
           each port, i in portfolios
             .col-sm-6.col-md-4.portfolio-item(id="portfolio-modal#{i}")
@@ -155,7 +158,7 @@ html(lang='en')
         .row
           .col-md-12.text-center
             h2 Projects of Interests
-            hr.star-primary
+
     each port, i in portfolios
       div.portfolio-modal.modal.fade(id='portfolioModal#{i}',tabindex='-1', role='dialog', aria-hidden='true')
         .modal-content
@@ -200,27 +203,6 @@ html(lang='en')
                       i.fa.fa-times
                       | Close
 
-    //
-      About Section 
-    section#about.success
-      .container
-        .row
-          .col-md-12.text-center
-            h2 About
-            hr.star-light
-        .row
-          .col-md-10.col-md-offset-1
-            h3
-              | Zhibin specializes in how data is presented and collected between servers and browsers.
-          .col-md-10.col-md-offset-1
-            blockquote
-              p
-                | Bad programmers worry about the code. Good programmers worry about data structures and their relationships.
-              footer
-                cite(title='Linus Torvalds') Linus Torvalds
-          .col-md-10.col-md-offset-1
-            p
-              | Zhibin believes that good data structures generates good code, and the same applies to web. Zhibin's passion is to continue to learn and understand more complex data structures, so he can deliver more simplified and elegant front-end solutions that are intuitive scalable and easy to maintain.
 
     //
        References Grid Section 
@@ -236,42 +218,34 @@ html(lang='en')
     //
        Contact Section 
     section#contact
-      .container
+      .container.text-center
         .row
-          .col-md-12.text-center
-            h2 Contact
-            hr.star-primary
-        .row
-          .col-md-12.text-center
-            a.btn.btn-primary.btn-lg(href='mailto:benjaminhuang1@gmail.com') Email Zhibin
+          .col-md-6.col-md-offset-3
+            ul.list-inline
+              li
+                a.btn-social.btn-outline(href='mailto:benjaminhuang1@gmail.com')
+                  i.fa.fa-fw.fa-envelope-o
+              li
+                a.btn-social.btn-outline(href='https://github.com/benjah1', target='_blank')
+                  i.fa.fa-fw.fa-github
+              li
+                a.btn-social.btn-outline(href='https://www.linkedin.com/pub/zhibin-huang/2a/28/726', target='_blank')
+                  i.fa.fa-fw.fa-linkedin
+              li
+                a.btn-social.btn-outline(href='https://twitter.com/@benjaH_1', target='_blank')
+                  i.fa.fa-fw.fa-twitter
     //
        Footer 
     footer.text-center
-      .footer-above
-        .container
-          .row
-            .footer-col.col-md-4.col-md-offset-4
-              h3 Around the Web
-              ul.list-inline
-                li
-                  a.btn-social.btn-outline(href='https://github.com/benjah1', target='_blank')
-                    i.fa.fa-fw.fa-github
-                li
-                  a.btn-social.btn-outline(href='https://www.linkedin.com/pub/zhibin-huang/2a/28/726', target='_blank')
-                    i.fa.fa-fw.fa-linkedin
-                li
-                  a.btn-social.btn-outline(href='https://twitter.com/@benjaH_1', target='_blank')
-                    i.fa.fa-fw.fa-twitter
-      .footer-below
-        .container
-          .row
-            .col-md-10.col-md-offset-1
-              small
-                | <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" class="cc"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><i>Zhibin Huang</i></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://github.com/benjah1" property="cc:attributionName" rel="cc:attributionURL">benjah1</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>. Links to third-party sites are not included under this Creative Commons License. Please contact Support at <a href="mailto:benjaminhuang1@gmail.com">benjaminhuang1@gmail.com</a> for more information.
+      .container
+        .row
+          .col-md-12
+            small
+              | <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" class="cc"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><i>Zhibin Huang</i></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://github.com/benjah1" property="cc:attributionName" rel="cc:attributionURL">benjah1</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>. Links to third-party sites are not included under this Creative Commons License. Please contact Support at <a href="mailto:benjaminhuang1@gmail.com">benjaminhuang1@gmail.com</a> for more information.
     //
        Scroll to Top Button (Only visible on small and extra-small screen sizes) 
     .scroll-top.page-scroll.visible-xs.visble-sm
-      a.btn.btn-info(href='#page-top')
+      a.btn(href='#page-top')
         i.fa.fa-chevron-up
     | 
     | <!-- build:js(.) scripts/vendor.js -->
@@ -294,6 +268,15 @@ html(lang='en')
     | <!-- endbuild -->
     | 
     | <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script async src="scripts/main.js"></script>
+    <script async async src="scripts/main.js"></script>
     | <!-- endbuild -->
     | 
+    | <script>
+    | (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    | (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    | m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    | })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    | 
+    | ga('create', 'UA-55892930-1', 'auto');
+    | ga('send', 'pageview');
+    | </script>
