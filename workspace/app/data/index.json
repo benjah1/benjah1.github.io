@@ -33,8 +33,7 @@
 					"desc": "Excel base international business analysis app. I adapted the chain-of-responsibility pattern, designed an engine with an optimized excel, and integrated Google chart for visual data analysis. I led a team of 5 members to develop and launch it in limited time."
 				},{
 					"name": "General Partner Profile, 2013",
-					"desc": "An international online business portfolio network which is integrated with Euclid's ClearVantage (desktop Association Management Software). It is used by thousands of paid members.",
-					"print": "not-print"
+					"desc": "An international online business portfolio network which is integrated with Euclid's ClearVantage (desktop Association Management Software) through XML communication. It is used by thousands of paid members."
 				}
 			],
 			"source" : [

@@ -49,6 +49,9 @@ window.jQuery(function($) {
 			return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 		}, type = GET('t'), num = $('<span class="number print-only">(647) 938-2330</span>');
 		
+		$('span.email').after(num);
+    
+    /*
 		switch (type) {
 			case 'frontend':
 				$('.php').css('display', 'none');
@@ -64,6 +67,7 @@ window.jQuery(function($) {
 		if ('' !== type) {
 			$('span.email').after(num);
 		}
+    */
 	})($);
 
 });

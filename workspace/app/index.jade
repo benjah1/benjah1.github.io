@@ -69,8 +69,9 @@ html(lang='en')
             img.img-responsive.img-circle(src='images/profile.jpg', alt='Headshot of Zhibin Huang')
             h1.name Zhibin Huang
             .intro-text
-              span.skills Web Developer - Full Stack - Toronto, ON #{index}
+              span.skills Web Developer - Full Stack - Toronto, ON
               span.email.print-only benjaminhuang1@gmail.com
+              span.link.print-only http://benjah1.github.io
             .resume
               a.btn.btn-primary.btn-lg(onclick='window.print();') Print Resume
               | &nbsp;or&nbsp;
@@ -78,7 +79,7 @@ html(lang='en')
 
     //
        Summery Grid Section 
-    section#summary
+    section#summary.hidden
       .container
         .row
           .col-md-12
@@ -206,7 +207,7 @@ html(lang='en')
 
     //
        References Grid Section 
-    section#ref
+    section#ref.hidden
       .container
         .row
           .col-md-12.text-center

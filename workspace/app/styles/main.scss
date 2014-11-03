@@ -79,13 +79,15 @@ h1, h2, h3, h4, h5, h6 {
 	display: none;
 }
 
-.fade {
-	opacity: 1;
-	transform: translateX(100%);
-	@include transition(all);
-	&.in {
-		transform: translateX(0%);
-	}
+.modal {
+  &.fade {
+    opacity: 1;
+    transform: translateX(100%);
+    @include transition(all);
+    &.in {
+      transform: translateX(0%);
+    }
+  }
 }
 
 hr.break {
