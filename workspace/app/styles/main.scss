@@ -43,6 +43,7 @@ $text-color: #333;
 body {
 	overflow-x: hidden;
 	font-size: 16px;
+  text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
 }
 
 p {
@@ -166,12 +167,10 @@ header {
 	.page-scroll {
 		a {
 			@include transition(all);
-		}
-		&:hover {
-			a {
-				@include text-shadow(sm);
-			}
-		}
+      &:hover {
+        @include text-shadow(sm);
+      }
+    }
 	}
 	
 }
