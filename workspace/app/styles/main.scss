@@ -1,29 +1,32 @@
+/****************
+ * Variable
+ ****************/ 
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-
 $screen-lg: 1200px;
 $screen-md: 992px;
 $screen-sm: 720px;
 $screen-xs: 320px;
 
 $container-tablet: 720px;
-
-// Variables
 $brand-primary: #0a8f08;
 $brand-primary2: #E77C2A; // #5 
-$brand-primary3: #68350E; // #4
-$brand-primary4: #4B38A8; // #2
+$brand-primary3: darken(desaturate($brand-primary, 60%), 5%);
+$brand-primary4: lighten($brand-primary, 15%);
 $brand-success: $brand-primary;
 $brand-info: $brand-primary2;
 $navbar-default-link-hover-color: $brand-primary;
 $navbar-default-brand-hover-color: $brand-primary;
-$text-color: #333;
+$text-color: $brand-primary3;
 
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+/****************
+ * Mixin & Function
+ ****************/
 @mixin transition($t) {
-	transition:$t 0.4s linear;
+	transition:$t 0.6s linear;
 }
 @mixin b-box-shadow($size) {
 	@if $size == 'lg' {
@@ -39,7 +42,16 @@ $text-color: #333;
 		text-shadow: 1px 1px 1px rgba(0,0,0,.3);
 	}
 }
+@mixin filter($properties) {
+  @include prefixer(filter, $properties, webkit moz spec);
+}
+@function grayscale($value) {
+  @return #{ "grayscale(" + $value + ")" };
+}
 
+/****************
+ * Overall 
+ ****************/
 body {
 	overflow-x: hidden;
 	font-size: 16px;
@@ -48,26 +60,9 @@ body {
 
 p {
 	font-size: 20px;
-	
 	&.small {
 		font-size: 16px;
 	}
-}
-
-.btn-primary {
-	border-radius: 0px;
-	@include transition(all);
-	border: none;
-	
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-		border: none;
-		background-color: $brand-primary;
-		@include b-box-shadow(sm);
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,17 +73,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .print-only  {
 	display: none;
-}
-
-.modal {
-  &.fade {
-    opacity: 1;
-    transform: translateX(100%);
-    @include transition(all);
-    &.in {
-      transform: translateX(0%);
-    }
-  }
 }
 
 hr.break {
@@ -102,54 +86,52 @@ hr.break {
 	margin: 0 auto;
 }
 
-header {
-	text-align: center;
-  height: calc(100%);
-  .container {
-    padding: 50px 0;
-  }
-	img {
-		display: block;
-		margin: 0 auto 20px;
-		@include b-box-shadow(sm);
-	}
-  .name {
-    display: block;
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 2em;
-  }
-	.intro-text {
-		.skills {
-			font-size: 1.25em;
-			font-weight: 300;
-		}
-	}
-	.resume {
-		margin-top: 25px;
-	}
-  
-  @include transition(all);
-  
+blockquote footer, blockquote small, blockquote .small {
+  color: $text-color;
 }
 
-@media(min-width:$screen-sm) {
-	header {
-		.container {
-			padding: 50px 0;
-		}
-    .name {
-      font-size: 4.75em;
+/****************
+ * Overwrite Bootstrap
+ ****************/
+.btn-primary {
+	border-radius: 0px;
+	@include transition(all);
+	border: 2px solid #fff;
+	background-color: $brand-primary3;
+	
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    border: 2px solid $brand-primary4;
+    background-color: $brand-primary3;
+    color: $brand-primary4;
+    box-shadow: 0 0 3px $brand-primary4;
+    text-shadow: 0 0 2px $brand-primary4;
+	}
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+	outline: none;
+}
+
+.modal {
+  &.fade {
+    opacity: 1;
+    transform: translateX(100%);
+    @include transition(all);
+    &.in {
+      transform: translateX(0%);
     }
-		.intro-text {
-			.skills {
-				font-size: 1.75em;
-			}
-		}
-	}
+  }
 }
 
+/****************
+ * Navigation
+ ****************/
 .navbar {
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
@@ -157,27 +139,18 @@ header {
 	@include b-box-shadow(sm);
 	transform: translateY(-101%);
 	@include transition(all);
-
 	.navbar-nav {
 		letter-spacing: 1px;
-	}
-	.navbar-brand:hover {
-		@include text-shadow(lg);
 	}
 	.page-scroll {
 		a {
 			@include transition(all);
-      &:hover {
-        @include text-shadow(sm);
-      }
     }
 	}
-	
+  &.navbar-fixed-top.navbar-shrink {
+    transform: translateY(0);
+  }
 }
-.navbar-fixed-top.navbar-shrink {
-	transform: translateY(0);
-}
-
 @media(min-width:$screen-sm) {
 	.navbar-fixed-top {
 		padding: 25px 0;
@@ -185,12 +158,12 @@ header {
 			font-size: 2em;
 			@include transition(all);
 		}
-	}
-	.navbar-fixed-top.navbar-shrink {
-		padding: 10px 0;
-		.navbar-brand {
-			font-size: 1.5em;
-		}
+    &.navbar-shrink {
+      padding: 10px 0;
+      .navbar-brand {
+        font-size: 1.5em;
+      }
+    }
 	}
 }
 
@@ -199,9 +172,42 @@ header {
 		padding-right: 17px;
 	}
 }
+/*
+.scroll-top {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  width: 50px;
+  height: 50px;
+  z-index: 1049;
+  .btn {
+    background-color: white;
+    color: $text-color;;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 2px solid $text-color;;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 35px;
+    @include transition(all);
+    
+    &:hover {
+      @include b-box-shadow(sm);
+    }
+  }
+}
+*/
 
+/****************
+ * Section
+ ****************/
 section {
-	padding: 50px 0;
+	margin: 75px 0;
+  &.first {
+		margin-top: 0px;
+	}
 	h2 {
 		margin: 0;
 		font-size: 3em;
@@ -210,10 +216,80 @@ section {
 
 @media(max-width:$screen-sm) {
 	section {
-		padding: 75px 0;
+    margin: 50px 0;
 	}
-	section.first {
-		padding-top: 75px;
+}
+ 
+header {
+	text-align: center;
+  background-color: $brand-primary3;
+  color: #fff;
+  
+  .container {
+    padding: 75px 0;
+  }
+  .intro {
+    margin: 30px 0;
+  }
+  
+  .contact{
+    .btn-social {
+      color: #fff;
+      display: inline-block;
+      height: 45px;
+      width: 45px;
+      border: none;
+      text-align: center;
+      font-size: 30px;
+      @include transition(all);
+      
+      &:hover {
+        color: $brand-primary4;
+        text-shadow: 0 0 5px $brand-primary;
+      }
+    }
+  }
+  .name {
+    display: block;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 108px;
+    margin-left: 15px;
+  }
+	.intro-text {
+    margin-right: 3px;
+		.skills {
+			font-size: 1.25em;
+			font-weight: 300;
+		}
+	}
+	.resume {
+    margin-right: 20px;
+    span {
+      margin:0 20px;
+    }
+	}
+ 
+  @include transition(all);
+  
+}
+
+@media(max-width:$screen-md) {
+	#header {
+    .name {
+      font-size: 70px;
+      margin-left: 10px;
+    }
+	}
+}
+@media(max-width:$screen-sm) {
+	#header {
+    padding: 50px 0;
+    .name {
+      font-size: 50px;
+      margin-left: 5px;
+    }
 	}
 }
 
@@ -221,15 +297,8 @@ section {
 	display:none;
 }
 
-@mixin filter($properties) {
-  @include prefixer(filter, $properties, webkit moz spec);
-}
-@function grayscale($value) {
-  @return #{ "grayscale(" + $value + ")" };
-}
-
 .portfolio-item {
-	margin: 0 0 15px;
+  margin: 0 0 30px;
 	right: 0;
 	.portfolio-link {
 		display: block;
@@ -269,37 +338,17 @@ section {
 	}
 }
 
-@media(min-width:$screen-sm) {
-    #portfolio {
-        .portfolio-item {
-            margin: 0 0 30px;
-        }
-    }
-}
-
-blockquote footer, blockquote small, blockquote .small {
-  color: $text-color;
-}
-
-#contact {
-  .btn-social {
-    color: $text-color;;
-    display: inline-block;
-    height: 65px;
-    width: 65px;
-    border: 2px solid $text-color;;
-    border-radius: 100%;
-    text-align: center;
-    font-size: 35px;
-    line-height: 60px;
-    @include transition(all);
-    
-    &:hover {
-      @include b-box-shadow(sm);
+@media(max-width:$screen-sm) {
+  #portfolio {
+    .portfolio-item {
+      margin: 0 0 15px;
     }
   }
 }
 
+/****************
+ * Footer
+ ****************/
 footer {
 	color: $text-color;;
 	font-size: 14px;
@@ -309,39 +358,9 @@ footer {
 	} 
 }
 
-
-.btn:focus,
-.btn:active,
-.btn.active {
-	outline: none;
-}
-
-.scroll-top {
-    position: fixed;
-    right: 2%;
-    bottom: 2%;
-    width: 50px;
-    height: 50px;
-    z-index: 1049;
-    .btn {
-      background-color: white;
-      color: $text-color;;
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      border: 2px solid $text-color;;
-      border-radius: 100%;
-      text-align: center;
-      font-size: 24px;
-      line-height: 35px;
-      @include transition(all);
-      
-      &:hover {
-        @include b-box-shadow(sm);
-      }
-    }
-}
-
+/****************
+ * Portfolio
+ ****************/
 .portfolio-modal {
 	left: 30%;
 

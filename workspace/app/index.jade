@@ -13,7 +13,7 @@ html(lang='en')
         each val, key in ent
           - foo = foo+key+'="'+val+'" '
         <meta !{foo} />
-    
+
     title Zhibin Huang - PHP Web developer in Toronto
     | 
     | <!-- build:css(.) styles/vendor.css -->
@@ -64,20 +64,34 @@ html(lang='en')
       .container
         .row
           .col-md-12
-            img.img-responsive.img-circle(src='images/profile.jpg', alt='Headshot of Zhibin Huang')
+            .intro.contact
+              ul.list-inline
+                li
+                  a.btn-social.btn-outline(href='mailto:benjaminhuang1@gmail.com')
+                    i.fa.fa-fw.fa-envelope-o
+                li
+                  a.btn-social.btn-outline(href='https://github.com/benjah1', target='_blank')
+                    i.fa.fa-fw.fa-github
+                li
+                  a.btn-social.btn-outline(href='https://www.linkedin.com/pub/zhibin-huang/2a/28/726', target='_blank')
+                    i.fa.fa-fw.fa-linkedin
+                li
+                  a.btn-social.btn-outline(href='https://twitter.com/@benjaH_1', target='_blank')
+                    i.fa.fa-fw.fa-twitter
             h1.name Zhibin Huang
-            .intro-text
-              span.skills Web Developer - Full Stack - Toronto, ON
+            .intro.intro-text
+              span.skills Web Developer - Full Stack - Toronto, Ontario
               span.email.print-only benjaminhuang1@gmail.com
               span.link.print-only http://benjah1.github.io
-            .resume
+
+            .intro.resume
               a.btn.btn-primary.btn-lg(onclick='window.print();') Print Resume
-              | &nbsp;or&nbsp;
+              span or
               a.btn.btn-primary.btn-lg(target='_blank', href='/Resume.pdf') Resume.pdf
 
     //
        Summery Grid Section 
-    section#summary.hidden
+    section#summary
       .container
         .row
           .col-md-12
@@ -106,7 +120,7 @@ html(lang='en')
     section#work
       .container
         .row
-          .col-md-12.text-center
+          .col-md-12
             h2 Work Experience
         .row.print-push
           .col-md-8.col-md-offset-1
@@ -210,29 +224,10 @@ html(lang='en')
         .row
           .col-md-12.text-center
             h2 References
-            hr.star-light
         .row.print-push
           .col-md-12.text-center
             p Available Upon Request
-    //
-       Contact Section 
-    section#contact
-      .container.text-center
-        .row
-          .col-md-6.col-md-offset-3
-            ul.list-inline
-              li
-                a.btn-social.btn-outline(href='mailto:benjaminhuang1@gmail.com')
-                  i.fa.fa-fw.fa-envelope-o
-              li
-                a.btn-social.btn-outline(href='https://github.com/benjah1', target='_blank')
-                  i.fa.fa-fw.fa-github
-              li
-                a.btn-social.btn-outline(href='https://www.linkedin.com/pub/zhibin-huang/2a/28/726', target='_blank')
-                  i.fa.fa-fw.fa-linkedin
-              li
-                a.btn-social.btn-outline(href='https://twitter.com/@benjaH_1', target='_blank')
-                  i.fa.fa-fw.fa-twitter
+
     //
        Footer 
     footer.text-center
@@ -243,7 +238,7 @@ html(lang='en')
               | <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" class="cc"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><i>Zhibin Huang</i></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://github.com/benjah1" property="cc:attributionName" rel="cc:attributionURL">benjah1</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>. Links to third-party sites are not included under this Creative Commons License. Please contact Support at <a href="mailto:benjaminhuang1@gmail.com">benjaminhuang1@gmail.com</a> for more information.
     //
        Scroll to Top Button (Only visible on small and extra-small screen sizes) 
-    .scroll-top.page-scroll.visible-xs.visble-sm
+    .scroll-top.page-scroll.visible-xs.visble-sm.hidden
       a.btn(href='#page-top')
         i.fa.fa-chevron-up
     | 

@@ -7,6 +7,9 @@
       }, {
         "name": "author",
         "content": "http://github.com/benjah1"
+      }, {
+        "name": "keyword",
+        "content": "Zhibin, Web, PHP, JavaScript, Developer, Portfolio, Resume, Toronto, Ontario"
       }
     ], 
     "yoast": [
@@ -36,11 +39,11 @@
 		"frontend" : "To obtain a frontend developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career."
 	},
 	"skills" : {
-		"Languages" : "PHP (ZEC, ZEND022796), JavaScript, ActionScript, HTML5, CSS3, Sass, SQL, Regex, JSON, XML",
-		"Tools" : "Git, Vagrant, Grunt, Yeoman, Bower, JSLint, Jade, PHPunit, Various browser debugging tools",
-		"Libraries" : "WordPress, jQuery, Angular, Bootstrap",
-		"Patterns": "Responsive Design, Singleton, Factory, Adapter, Chain of Responsibility, Observer and etc.",
-		"Algorithms" : "Quick sort, Topological sort, DFS, BFS and etc."
+		"Languages" : "PHP (ZEC, ZEND022796), JavaScript, Ruby, ActionScript, HTML5, CSS3, SQL, Regex, JSON, XML",
+		"Tools" : "Git, Vagrant, Grunt, Yeoman, Bower, Sass, Jade, JSLint, PHPunit, Various browser debugging tools",
+		"Libraries" : "WordPress, jQuery, Angular, Bootstrap, Rails",
+		"Patterns": "Responsive Design, Singleton, Factory, Composite, Proxy, Command, Observer and etc.",
+		"Algorithms" : "Linked list, Tree, Graph, Quick sort, Topological sort, DFS, BFS and etc."
 	},
 	
 	"portfolios" : [

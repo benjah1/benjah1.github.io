@@ -1,3 +1,6 @@
+/****************
+ * Overall 
+ ****************/
 * {
 	font-size: 11px!important;
 	color: black;
@@ -20,7 +23,7 @@ h3 {
 }
 
 div {
-  //outline: 1px solid black;
+  // outline: 1px solid black;
 }
 
 nav {
@@ -54,29 +57,35 @@ hr, img, blockquote {
 	transform: translateX(0%);
 }
 
-header {
-	.container {
-		padding: 0;
-    
-    .intro-text span {
-      display: inline;
-      margin-left: 10px;  
-      
-      &.skills {
-        display: none;
-      }
-    }
-    
-    
-		.resume {
-			display: none;
-		}
-	}
+/****************
+ * Section 
+ ****************/
+section {
+	padding: 0px;
+  margin: 0px;
 }
 
-
-section {
-	padding: 0;
+header {
+  .container {
+    padding:0;
+  }
+  .intro {
+    margin:0;
+  }
+  .intro-text span {
+    display: inline;
+    margin-left: 10px;  
+    
+    &.skills {
+      display: none;
+    }
+  }
+  .contact {
+    display: none;
+  }
+  .resume {
+    display: none;
+  }
 }
 
 #portfolio {
@@ -91,7 +100,7 @@ section {
 	display: none;
 }
 
-#summary, #skill, #work, #ref, #project {
+#skill, #work, #ref, #project {
 	display: block;
 }
 
