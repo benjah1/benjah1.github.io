@@ -1,4 +1,36 @@
 {
+  "seo": {
+    "regular": [
+      {
+        "name": "description", 
+        "content": "Zhibin Huang's portfolio. Zhibin specializes in PHP with how data is presented and collected in Web. Toronto, Ontario, Canada."
+      }, {
+        "name": "author",
+        "content": "http://github.com/benjah1"
+      }
+    ], 
+    "yoast": [
+      {    
+        "property": "og:locale",
+        "content": "en_US"
+      }, {
+        "property": "og:type",
+        "content": "website"
+      }, {
+        "property": "og:title",
+        "content": "Zhibin Huang - PHP Web developer in Toronto"
+      }, {
+        "property": "og:description",
+        "content": "Zhibin Huang's portfolio. Zhibin specializes in PHP and Javascript with how data is presented and collected in Web. Toronto, Ontario, Canada."
+      }, {
+        "property": "og:url",
+        "content": "http://benjah1.github.io/"
+      }, {
+        "property": "og:site_name",
+        "content": "Zhibin Huang - PHP Web developer in Toronto"
+      }
+    ]
+  },
 	"objective": {
 		"php" : "To obtain a PHP developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career.",
 		"frontend" : "To obtain a frontend developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career."

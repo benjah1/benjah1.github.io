@@ -4,17 +4,15 @@ html(lang='en')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-
-    // SEO 
-    meta(name='description', content='Zhibin Huang\'s portfolio. Zhibin specializes in PHP with how data is presented and collected in Web. Toronto, Ontario, Canada.')
     link(rel='canonical', href='http://benjah1.github.io/')
-    meta(property='og:locale', content='en_US')
-    meta(property='og:type', content='website')
-    meta(property='og:title', content='Zhibin Huang - PHP Web developer in Toronto')
-    meta(property='og:description', content='Zhibin Huang\'s portfolio. Zhibin specializes in PHP with how data is presented and collected in Web. Toronto, Ontario, Canada.')
-    meta(property='og:url', content='http://benjah1.github.io/')
-    meta(property='og:site_name', content='Zhibin Huang - PHP Web developer in Toronto')
-    meta(name='author', content='benjah1')
+
+    // SEO
+    each cat in seo
+      each ent in cat
+        - foo = ""
+        each val, key in ent
+          - foo = foo+key+'="'+val+'" '
+        <meta !{foo} />
     
     title Zhibin Huang - PHP Web developer in Toronto
     | 
