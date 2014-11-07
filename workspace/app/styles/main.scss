@@ -276,7 +276,7 @@ header {
 }
 
 @media(max-width:$screen-md) {
-	#header {
+	header {
     .name {
       font-size: 70px;
       margin-left: 10px;
@@ -284,7 +284,7 @@ header {
 	}
 }
 @media(max-width:$screen-sm) {
-	#header {
+	header {
     padding: 50px 0;
     .name {
       font-size: 50px;
