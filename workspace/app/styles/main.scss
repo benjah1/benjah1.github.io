@@ -228,6 +228,7 @@ header {
 	text-align: center;
   background-color: $brand-primary3;
   color: #fff;
+  @include transition(all);
   
   .container {
     padding: 75px 0;
@@ -267,6 +268,9 @@ header {
   }
 	.intro-text {
     margin-right: 3px;
+    div {
+      display: inline-block;
+    }
 		.skills {
 			font-size: 1.25em;
 			font-weight: 300;
@@ -279,8 +283,6 @@ header {
     }
 	}
  
-  @include transition(all);
-  
 }
 
 @media(max-width:$screen-md) {
