@@ -3,13 +3,16 @@
     "regular": [
       {
         "name": "description", 
-        "content": "Zhibin Huang's portfolio. Zhibin specializes in PHP with how data is presented and collected in Web. Toronto, Ontario, Canada."
+        "content": "Zhibin Huang's portfolio. Zhibin specializes in PHP and JavaScript with how data is presented and collected in Web. Toronto, Ontario, Canada."
       }, {
         "name": "author",
         "content": "http://github.com/benjah1"
       }, {
-        "name": "keyword",
-        "content": "Zhibin, Web, PHP, JavaScript, Developer, Portfolio, Resume, Toronto, Ontario"
+        "name": "keywords",
+        "content": "Zhibin, Web, Web app, PHP, JavaScript, Developer, WordPress, Portfolio, Resume, Toronto, Ontario"
+      }, {
+        "name": "robots",
+        "content": "index, follow"
       }
     ], 
     "yoast": [
@@ -21,7 +24,7 @@
         "content": "website"
       }, {
         "property": "og:title",
-        "content": "Zhibin Huang - PHP Web developer in Toronto"
+        "content": "Zhibin Huang - PHP Web developer - Toronto Ontario"
       }, {
         "property": "og:description",
         "content": "Zhibin Huang's portfolio. Zhibin specializes in PHP and Javascript with how data is presented and collected in Web. Toronto, Ontario, Canada."
@@ -30,13 +33,12 @@
         "content": "http://benjah1.github.io/"
       }, {
         "property": "og:site_name",
-        "content": "Zhibin Huang - PHP Web developer in Toronto"
+        "content": "Zhibin Huang - PHP Web developer - Toronto Ontario"
       }
     ]
   },
 	"objective": {
-		"php" : "To obtain a PHP developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career.",
-		"frontend" : "To obtain a frontend developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career."
+		"php" : "To obtain a PHP & JavaScript developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career."
 	},
 	"skills" : {
 		"Languages" : "PHP (ZEC, ZEND022796), JavaScript, Ruby, ActionScript, HTML5, CSS3, SQL, Regex, JSON, XML",
@@ -62,10 +64,10 @@
 			"projects" : [
 				{
 					"name": "LPA Ratings Tool, 2011",
-					"desc": "An international scorecard web app. I proposed a system that supports conditional questions, instant saves, scoring system. As a core developer, I led a team of 3 members to implement it. After launched, I continued on supporting it, and developed add-on of third party portal access for temporary legal counsels."
+					"desc": "An international scorecard PHP web app. I proposed a system that supports conditional questions, instant saves, scoring system. As a core developer, I led a team of 3 members to implement it. After launched, I continued on supporting it, and developed add-on of third party portal access for temporary legal counsels."
 				},{
 					"name": "GP Economics Application, 2012",
-					"desc": "Excel base international business analysis app. I adapted the chain-of-responsibility pattern, designed an engine with an optimized excel, and integrated Google chart for visual data analysis. I led a team of 5 members to develop and launch it in limited time."
+					"desc": "Excel base international business analysis PHP web app. I adapted the chain-of-responsibility pattern, designed an engine with an optimized excel, and integrated Google chart for visual data analysis. I led a team of 5 members to develop and launch it in limited time."
 				},{
 					"name": "General Partner Profile, 2013",
 					"desc": "An international online business portfolio network which is integrated with Euclid's ClearVantage (desktop Association Management Software) through XML communication. It is used by thousands of paid members."
@@ -99,7 +101,7 @@
 						"src": "images/portfolio/rrtg-fl-home.jpg",
 						"alt": "RRTG School Cents Online Module homepage"
 					},
-					"desc": "A highly interactive e-learning module built with Angular and Bootstrap. I worked closely with designer and created a angular-shortcode system which allows designer to focus on simple HTML."
+					"desc": "A highly interactive e-learning module built with Angular JS and Bootstrap. I worked closely with designer and created a angular-shortcode system in WordPress which allows designer to focus on simple HTML."
 				}
 			]
 		},
@@ -169,7 +171,7 @@
 						"src": "images/portfolio/christsmas-2013-home.jpg",
 						"alt": "Christmas 2013 homepage"
 					},
-					"desc": "Building 3D holiday card with CSS3 such as transform, transition and animation to demonstrate 3D modelling with animation in HTML.",
+					"desc": "Building 3D holiday card with JavaScript and CSS3 such as transform, transition and animation to demonstrate 3D modelling with animation in HTML.",
 					"url": "http://benjah1.github.io/christmas2013"
 				},{
 					"name": "Android Apps",

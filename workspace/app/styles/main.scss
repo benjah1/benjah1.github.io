@@ -3,20 +3,20 @@
  ****************/ 
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 $screen-lg: 1200px;
-$screen-md: 992px;
-$screen-sm: 720px;
-$screen-xs: 320px;
+$screen-md: 1024px;
+$screen-sm: 768px;
+$screen-xs: 480px;
 
 $container-tablet: 720px;
 $brand-primary: #0a8f08;
 $brand-primary2: #E77C2A; // #5 
 $brand-primary3: darken(desaturate($brand-primary, 60%), 5%);
-$brand-primary4: lighten($brand-primary, 15%);
+$brand-primary4: lighten($brand-primary, 5%);
 $brand-success: $brand-primary;
 $brand-info: $brand-primary2;
 $navbar-default-link-hover-color: $brand-primary;
 $navbar-default-brand-hover-color: $brand-primary;
-$text-color: $brand-primary3;
+$text-color: darken($brand-primary3, 10%);
 
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
@@ -26,7 +26,7 @@ $text-color: $brand-primary3;
  * Mixin & Function
  ****************/
 @mixin transition($t) {
-	transition:$t 0.6s linear;
+	transition:$t 0.4s linear;
 }
 @mixin b-box-shadow($size) {
 	@if $size == 'lg' {
@@ -96,19 +96,23 @@ blockquote footer, blockquote small, blockquote .small {
 .btn-primary {
 	border-radius: 0px;
 	@include transition(all);
-	border: 2px solid #fff;
 	background-color: $brand-primary3;
+	border: 2px solid lighten($brand-primary3, 60%);
+  color: lighten($brand-primary3, 60%);
+  color: #fff;
+  opacity: 1;
 	
   &:hover,
   &:focus,
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    border: 2px solid $brand-primary4;
-    background-color: $brand-primary3;
-    color: $brand-primary4;
-    box-shadow: 0 0 3px $brand-primary4;
-    text-shadow: 0 0 2px $brand-primary4;
+    border: 2px solid #fff;;
+    background-color: $brand-primary;
+    color: #fff;
+    opacity: 1;
+//    box-shadow: 0 0 1px $brand-primary4;
+//    text-shadow: 0 0 1px $brand-primary4;
 	}
 }
 
@@ -238,14 +242,18 @@ header {
       display: inline-block;
       height: 45px;
       width: 45px;
-      border: none;
+      border: 2px solid lighten($brand-primary3, 0%);
+      border-radius: 50%;
       text-align: center;
-      font-size: 30px;
+      font-size: 24px;
+      line-height: 40px;
       @include transition(all);
       
       &:hover {
-        color: $brand-primary4;
-        text-shadow: 0 0 5px $brand-primary;
+        opacity: 1;
+        border: 2px solid lighten($brand-primary3, 60%);;
+        background-color: darken($brand-primary, 0%);
+        //box-shadow: 0 0 2px $brand-primary;
       }
     }
   }
@@ -294,6 +302,18 @@ header {
     }
 	}
 }
+@media(max-width:$screen-xs) {
+	header {
+    .resume {
+      span {
+        display: none;
+      }
+      .btn {
+        margin: 5px;
+      }
+    }
+	}
+}
 
 #summary, #skill, #work, #ref, #project {
 	display:none;
@@ -308,8 +328,8 @@ header {
 		max-width: 400px;
 		margin: 0 auto;
 		@include transition(all);
-		filter: grayscale(80%);
-		opacity: 0.9;
+		filter: grayscale(50%);
+		//opacity: 0.9;
 		
 		.portfolio-custom {
 			position: relative;
@@ -318,7 +338,7 @@ header {
 			z-index: 1;
 			&> div {
 				position: absolute;
-				color: $brand-primary;
+				color: $brand-primary3;
 				top: 50%;
 				transform: translateY(-50%);
 				width: 100%;
@@ -335,6 +355,7 @@ header {
 		
 		&:hover {
 			filter: grayscale(0%);
+      transform: translateY(-5px);
 			opacity: 1;
 		}
 	}

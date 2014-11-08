@@ -14,7 +14,7 @@ html(lang='en')
           - foo = foo+key+'="'+val+'" '
         <meta !{foo} />
 
-    title Zhibin Huang - PHP Web developer in Toronto
+    title Zhibin Huang - PHP Web developer - Toronto Ontario
     | 
     | <!-- build:css(.) styles/vendor.css -->
     | <!-- bower:css -->
@@ -134,6 +134,9 @@ html(lang='en')
       About Section 
     section#about
       .container
+        .row.hidden
+          .col-md-12
+            h2 About Zhibin
         .row
           .col-md-10.col-md-offset-1
             h3
@@ -146,12 +149,15 @@ html(lang='en')
                 cite(title='Linus Torvalds') Linus Torvalds
           .col-md-10.col-md-offset-1
             p
-              | Zhibin believes that good data structures generates good code, and the same applies to web. Zhibin's passion is to continue to learn and understand more complex data structures, so he can deliver more simplified and elegant front-end solutions that are intuitive scalable and easy to maintain.
+              | Zhibin believes that good data structures generates good code, and the same applies to the web. Zhibin's passion is to continue to learn and understand more complex data structures, so he can deliver more simplified and elegant front-end solutions that are intuitive scalable and easy to maintain.
 
     //
       Portfolio Grid Section 
     section#portfolio
       .container
+        .row.hidden
+          .col-md-12
+            h2 Client of Interests
         .row
           each port, i in portfolios
             .col-sm-6.col-md-4.portfolio-item(id="portfolio-modal#{i}")
