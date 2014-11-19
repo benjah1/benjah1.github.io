@@ -65,7 +65,7 @@ section {
   margin: 0px;
 }
 
-header {
+body > header {
   .container {
     padding:0;
   }
@@ -102,6 +102,11 @@ header {
 
 #skill, #work, #ref, #project {
 	display: block;
+}
+
+#skill p {
+  padding-left: 12%;
+  margin-top: -14px;
 }
 
 .scroll-top{

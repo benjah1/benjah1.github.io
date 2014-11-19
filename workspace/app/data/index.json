@@ -9,7 +9,7 @@
         "content": "http://github.com/benjah1"
       }, {
         "name": "keywords",
-        "content": "Zhibin, Web, Web app, PHP, JavaScript, Developer, WordPress, Portfolio, Resume, Toronto, Ontario"
+        "content": "Zhibin, Web, Web application, PHP, JavaScript, Developer, WordPress, Portfolio, Resume, Toronto, Ontario"
       }, {
         "name": "robots",
         "content": "index, follow"
@@ -27,7 +27,7 @@
         "content": "Zhibin Huang - PHP Web developer - Toronto Ontario"
       }, {
         "property": "og:description",
-        "content": "Zhibin Huang's portfolio. Zhibin specializes in PHP and Javascript with how data is presented and collected in Web. Toronto, Ontario, Canada."
+        "content": "Zhibin Huang's portfolio. Zhibin specializes in PHP and JavaScript with how data is presented and collected in Web. Toronto, Ontario, Canada."
       }, {
         "property": "og:url",
         "content": "http://benjah1.github.io/"
@@ -41,11 +41,10 @@
 		"php" : "To obtain a PHP & JavaScript developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career."
 	},
 	"skills" : {
-		"Languages" : "PHP (ZEC, ZEND022796), JavaScript, Ruby, ActionScript, HTML5, CSS3, SQL, Regex, JSON, XML",
-		"Tools" : "Git, Vagrant, Grunt, Yeoman, Bower, Sass, Jade, JSLint, PHPunit, Various browser debugging tools",
-		"Libraries" : "WordPress, jQuery, Angular, Bootstrap, Rails",
-		"Patterns": "Responsive Design, Singleton, Factory, Composite, Proxy, Command, Observer and etc.",
-		"Algorithms" : "Linked list, Tree, Graph, Quick sort, Topological sort, DFS, BFS and etc."
+		"Languages" : "PHP (ZEC, ZEND022796), JavaScript, Ruby, ActionScript, HTML5, CSS3, SQL, Regex, JSON, XML.",
+		"Tools" : "Git, Vagrant, Composer, Npm, Gem, Bower, Yeoman, Grunt, Gulp, Sass, Jade, JSLint, Karma, Selenium, Travis CI, Jenkins, XDebug, Various browser debugging tools.",
+		"Libraries" : "WordPress, jQuery, Angular, Bootstrap, Rails, Mocha, Chai.",
+		"Skills": "Design Patterns, Data Structures, Algorithms, Responsive Design, Workflow."
 	},
 	
 	"portfolios" : [
@@ -64,13 +63,13 @@
 			"projects" : [
 				{
 					"name": "LPA Ratings Tool, 2011",
-					"desc": "An international scorecard PHP web app. I proposed a system that supports conditional questions, instant saves, scoring system. As a core developer, I led a team of 3 members to implement it. After launched, I continued on supporting it, and developed add-on of third party portal access for temporary legal counsels."
+					"desc": "An international scorecard PHP web application. I proposed a system design that supports conditional questions, instant saves, scoring system. As a core developer, I led a team of 3 members to implement the design. After launched, I continued on supporting this application, and developed add-on of third party portal access for temporary legal counsels."
 				},{
 					"name": "GP Economics Application, 2012",
-					"desc": "Excel base international business analysis PHP web app. I adapted the chain-of-responsibility pattern, designed an engine with an optimized excel, and integrated Google chart for visual data analysis. I led a team of 5 members to develop and launch it in limited time."
+					"desc": "Excel base international business analysis PHP web application. I adapted the chain-of-responsibility pattern, designed an engine with an optimized excel and integrated Google chart for visual data analysis. I led a team of 5 members to develop and launch it in 3 weeks."
 				},{
 					"name": "General Partner Profile, 2013",
-					"desc": "An international online business portfolio network which is integrated with Euclid's ClearVantage (desktop Association Management Software) through XML communication. It is used by thousands of paid members."
+					"desc": "An international online business portfolio network which is integrated with Euclid's ClearVantage (desktop Association Management Software) through XML communication. This integration speeded up the workflow in ILPA, and the online portfolio is used by thousands of paid members."
 				}
 			],
 			"source" : [
@@ -93,7 +92,7 @@
 						"src": "images/portfolio/rrtg-home.jpg",
 						"alt": "RRTG homepage"
 					},
-					"desc": "A national bilingual educational community with BuddyPress. Co-creator on e-learning modules. I continued on supporting it after launch, and developed add-on features which is integrated with various third party systems such as OpenBadge, Fluidsurvey and Google Analytics API. A thousand of registered users and increasing.",
+					"desc": "A national bilingual educational community with BuddyPress. Co-creator on e-learning modules. I continued on supporting it after launch, and developed add-on features which are integrated with various third party systems such as OpenBadge, Fluidsurvey and Google Analytics API. The program is widely used across Canada with thousands of registered users and increasing.",
 					"url": "http://my.raisingthegrade.ca"
 				},{
 					"name": "School Cents Online Module, 2014",
@@ -101,7 +100,7 @@
 						"src": "images/portfolio/rrtg-fl-home.jpg",
 						"alt": "RRTG School Cents Online Module homepage"
 					},
-					"desc": "A highly interactive e-learning module built with Angular JS and Bootstrap. I worked closely with designer and created a angular-shortcode system in WordPress which allows designer to focus on simple HTML."
+					"desc": "A highly interactive e-learning module built using WordPress, Bootstrap, AngularJS and subtle parallax effects. Behind the scene, I worked closely with the designer and created an angular-shortcode system in WordPress which allows the designer to focus on simple HTML. Together with the team, we were able to give SRDC and BGCC a flexible platform for delivering various interactive content."
 				}
 			]
 		},
@@ -116,20 +115,20 @@
 			},
 			"projects": [
 				{
-					"name": "Radii website, 2014",
+					"name": "WordPress website, 2014",
 					"img": {
 						"src": "images/portfolio/radii-2014-home.jpg",
 						"alt": "Radii 2014 homepage"
 					},
-					"desc": "A business and bloging platform with WordPress 3.9.1. I worked closely with designers and created a highly end-user-friendly bootstrap-supported editor, of which content is pre-compiled for search and performance, based on <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>.",
+					"desc": "A business and blogging platform with WordPress 3.9.1. I worked closely with the designers and created a highly end-user-friendly bootstrap-supported editor, of which content is pre-compiled for search and performance, based on <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>.",
 					"url": "http://goradii.com"
 				},{
-					"name": "Radii website, 2011",
+					"name": "WordPress website, 2011",
 					"img": {
 						"src": "images/portfolio/radii-2011-home.jpg",
 						"alt": "Radii 2011 homepage"
 					},
-					"desc": "A business and bloging platform with WordPress 3.2.1. Created widget with dynamic manageable content.",
+					"desc": "A business and blogging platform with WordPress 3.2.1. Created widget with dynamic manageable content.",
 					"print" : "not-print"
 				},{
 					"name": "Data mining",
@@ -148,14 +147,14 @@
 						"src": "images/portfolio/lahs-home.jpg",
 						"alt": "Life After High School homepage"
 					},
-					"desc": "Proposed and implemented offline videos with python web service, and created bash script to set up on hundreds of provided MacBooks for the need of national conferences."
+					"desc": "Proposed and implemented offline videos with python web service, and created a bash script to set up on hundreds of provided MacBooks for the need of national conferences. The creative enhancement successfully saves a significant amount of budgets in streaming videos through mobile network."
 				},{
 					"name": "Fortran Traffic, 2011",
 					"img": {
 						"src": "images/portfolio/ff-home.jpg",
 						"alt": "Fortran Traffic homepage"
 					},
-					"desc": "Created uploaded files management system in ColdFusion.",
+					"desc": "Created uploaded files management system in ColdFusion. This enhancement greatly increases the controllability of document in the original CMS system.",
 					"print": "not-print"
 				}
 			]
@@ -171,15 +170,15 @@
 						"src": "images/portfolio/christsmas-2013-home.jpg",
 						"alt": "Christmas 2013 homepage"
 					},
-					"desc": "Building 3D holiday card with JavaScript and CSS3 such as transform, transition and animation to demonstrate 3D modelling with animation in HTML.",
+					"desc": "Building 3D holiday card with JavaScript and CSS3 such as transform, transition and animation to demonstrate 3D modeling with animation in HTML.",
 					"url": "http://benjah1.github.io/christmas2013"
 				},{
-					"name": "Android Apps",
+					"name": "Android Applications",
 					"img": {
 						"src": "images/portfolio/play-store.jpg",
 						"alt": "benjaminhuang on Play Store"
 					},
-					"desc": "Created and published 7 Android apps in HTML with phoneGap or native JAVA with SDK for exercising."
+					"desc": "Created and published 7 Android Applications in HTML with PhoneGap or native JAVA with SDK for exercising."
 				},{
 					"name": "Events Organizer, 2014 - Present",
 					"desc": "Organizing offline study and hangout events on a weekly basis in a Chinese programmers community."

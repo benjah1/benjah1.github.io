@@ -111,9 +111,9 @@ html(lang='en')
         .row.print-push
           .col-md-12
             each val, index in skills
-              p
+              div
                 b #{index}
-                | #{val}
+                p #{val}
     
     //
       Work Grid Section 
@@ -189,44 +189,46 @@ html(lang='en')
           .modal-content
             .container
               .row.print-push
-                .col-md-8.col-md-offset-1
+                article.col-md-8.col-md-offset-1
+                  header
                     button.btn.btn-default.pull-right(type='button', data-dismiss='modal')
                       i.fa.fa-times
                     h2 #{port.name}
-                    hr.break
-                    if port.img
-                      img.img-responsive(src='#{port.img.src}', alt='#{port.img.alt}')
-                    each prj, j in port.projects
-                      if prj.print
-                        div(class="#{prj.print}",itemscope,itemtype="http://data-vocabulary.org/CreativeWork")
+                  hr.break
+                  if port.img
+                    img.img-responsive(src='#{port.img.src}', alt='#{port.img.alt}')
+                  each prj, j in port.projects
+                    if prj.print
+                      section(class="#{prj.print}",itemscope,itemtype="http://data-vocabulary.org/CreativeWork")
+                        header
                           h3(itemprop="name") #{prj.name}
-                          if prj.url
-                            a(class="url-link",href="#{prj.url}",target="_blank",itemprop="sameAs")
-                              i.fa.fa-link
-                              | &nbsp;#{prj.url}
-                          p(itemprop="description")
-                            b #{prj.name}
-                              |. 
-                            !{prj.desc}
-                          if prj.img
-                            img.img-responsive(src='#{prj.img.src}', alt='#{prj.img.alt}')
-                      else
-                        div(itemscope,itemtype="http://data-vocabulary.org/CreativeWork")
+                        if prj.url
+                          a(class="url-link",href="#{prj.url}",target="_blank",itemprop="sameAs")
+                            i.fa.fa-link
+                            | &nbsp;#{prj.url}
+                        p(itemprop="description")
+                          b #{prj.name}
+                            |. 
+                          !{prj.desc}
+                        if prj.img
+                          img.img-responsive(src='#{prj.img.src}', alt='#{prj.img.alt}')
+                    else
+                      section(itemscope,itemtype="http://data-vocabulary.org/CreativeWork")
+                        header
                           h3(itemprop="name") #{prj.name}
-                          if prj.url
-                            a(class="url-link",href="#{prj.url}",target="_blank",itemprop="sameAs")
-                              i.fa.fa-link
-                              | &nbsp;#{prj.url}
-                          p(itemprop="description")
-                            b #{prj.name}
-                              |. 
-                            !{prj.desc}
-                          if prj.img
-                            img.img-responsive(src='#{prj.img.src}', alt='#{prj.img.alt}')
-                    footer
-                      button.btn.btn-default.btn-lg(type='button', data-dismiss='modal')
-                        i.fa.fa-times
-                        | Close
+                        if prj.url
+                          a(class="url-link",href="#{prj.url}",target="_blank",itemprop="sameAs")
+                            i.fa.fa-link
+                            | &nbsp;#{prj.url}
+                        p(itemprop="description")
+                          b #{prj.name}. 
+                          !{prj.desc}
+                        if prj.img
+                          img.img-responsive(src='#{prj.img.src}', alt='#{prj.img.alt}')
+                  footer
+                    button.btn.btn-default.btn-lg(type='button', data-dismiss='modal')
+                      i.fa.fa-times
+                      | Close
 
 
     //
@@ -245,7 +247,7 @@ html(lang='en')
     footer.text-center
       .container
         .row
-          .col-md-12
+          .col-md-10.col-md-offset-1
             small
               | <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" class="cc"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><i>Zhibin Huang</i></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://github.com/benjah1" property="cc:attributionName" rel="cc:attributionURL">benjah1</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>. Links to third-party sites are not included under this Creative Commons License. Please contact Support at <a href="mailto:benjaminhuang1@gmail.com">benjaminhuang1@gmail.com</a> for more information.
     //
