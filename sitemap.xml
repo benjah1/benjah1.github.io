@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>http://benjah1.github.io/</loc>
+      <changefreq>weekly</changefreq>
+   </url> 
+   <url>
+      <loc>http://benjah1.github.io/christmas2013/</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>http://benjah1.github.io/christmas2012/</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+</urlset> 
