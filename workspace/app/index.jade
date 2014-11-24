@@ -67,16 +67,16 @@ html(lang='en')
             .intro.contact
               ul.list-inline
                 li
-                  a.btn-social.btn-outline(href='mailto:benjaminhuang1@gmail.com')
+                  a.btn-social.btn-outline(href='mailto:benjaminhuang1@gmail.com',data-ga='email')
                     i.fa.fa-fw.fa-envelope-o
                 li
-                  a.btn-social.btn-outline(href='https://github.com/benjah1', target='_blank')
+                  a.btn-social.btn-outline(href='https://github.com/benjah1', target='_blank',data-ga='github')
                     i.fa.fa-fw.fa-github
                 li
-                  a.btn-social.btn-outline(href='https://www.linkedin.com/pub/zhibin-huang/2a/28/726', target='_blank')
+                  a.btn-social.btn-outline(href='https://www.linkedin.com/pub/zhibin-huang/2a/28/726', target='_blank',data-ga='linkedin')
                     i.fa.fa-fw.fa-linkedin
                 li
-                  a.btn-social.btn-outline(href='https://twitter.com/@benjaH_1', target='_blank')
+                  a.btn-social.btn-outline(href='https://twitter.com/@benjaH_1', target='_blank',data-ga='twitter')
                     i.fa.fa-fw.fa-twitter
             h1.name Zhibin Huang
             .intro.intro-text
@@ -85,9 +85,9 @@ html(lang='en')
               span(itemprop="url").link.print-only http://benjah1.github.io
 
             .intro.resume
-              a.btn.btn-primary.btn-lg(onclick='window.print();') Print Resume
+              a.btn.btn-primary.btn-lg.btn-resume(onclick='window.print();',data-ga='print') Print Resume
               span or
-              a.btn.btn-primary.btn-lg(target='_blank', href='/Resume.pdf') Resume.pdf
+              a.btn.btn-primary.btn-lg.btn-resume(target='_blank', href='/Resume.pdf',data-ga='pdf') Resume.pdf
 
     //
        Summery Grid Section 
@@ -161,7 +161,7 @@ html(lang='en')
         .row
           each port, i in portfolios
             .col-sm-6.col-md-4.portfolio-item(id="portfolio-modal#{i}")
-              a.portfolio-link(href='#portfolioModal#{i}', data-toggle='modal')
+              a.portfolio-link(href='#portfolioModal#{i}', data-toggle='modal',data-ga='#{port.key}')
                 if port.logo
                   img.img-responsive(src='#{port.logo.img.src}', alt='#{port.logo.img.alt}')
                 else
@@ -285,6 +285,4 @@ html(lang='en')
     | m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     | })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     | 
-    | ga('create', 'UA-55892930-1', 'auto');
-    | ga('send', 'pageview');
     | </script>

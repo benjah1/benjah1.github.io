@@ -50,6 +50,7 @@
 	"portfolios" : [
 		{
 			"name" : "Institutional Limited Partners Association",
+			"key" : "ilpa",
 			"logo" : {
 				"img": {
 					"src": "images/portfolio/ilpa.jpg",
@@ -79,6 +80,7 @@
 		
 		{
 			"name" : "Boys and Girls Clubs of Canada",
+			"key" : "bgcc",
 			"logo" : {
 				"img": {
 					"src": "images/portfolio/bgcc.jpg",
@@ -107,6 +109,7 @@
 		
 		{
 			"name": "Radii Production",
+			"key" : "radii",
 			"logo" : {
 				"img": {
 					"src": "images/portfolio/radii.jpg",
@@ -139,6 +142,7 @@
 		
 		{
 			"name": "Other Project",
+			"key" : "other",
 			"logo": false,
 			"projects": [
 				{
@@ -162,6 +166,7 @@
 		
 		{
 			"name": "Personal Experience",
+			"key" : "personal",
 			"logo": false,
 			"projects": [
 				{

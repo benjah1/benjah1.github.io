@@ -42,32 +42,37 @@ window.jQuery(function($) {
 	
 	// specify resume 
 	(function($) {
-		var GET = function (name) {
-			name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-			var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
-					results = regex.exec(location.search);
-			return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-		}, type = GET('t'), num = $('<span class="number print-only">(647) 938-2330</span>');
-		
+		var num = $('<span class="number print-only">(647) 938-2330</span>');
 		$('span.email').after(num);
-    
-    /*
-		switch (type) {
-			case 'frontend':
-				$('.php').css('display', 'none');
-				break;
-			case 'php':
-				$('.frontend').css('display', 'none');
-				break;
-			default: 
-				$('.frontend').css('display', 'none');
-				break;
-		}
-		
-		if ('' !== type) {
-			$('span.email').after(num);
-		}
-    */
 	})($);
 
+	(function($) {
+		var waitGA = function() {
+			if('undefined' === typeof window.ga) {
+				setTimeout(waitGA, 100);
+			} else {
+				runGA(window.ga);
+			}
+		};
+
+		var runGA = function(ga) {
+	    ga('create', 'UA-55892930-1', 'auto');
+	    ga('send', 'pageview');
+
+	    $('.btn-social').click(function() {
+	    	var d = $(this).data('ga');
+	    	ga('send', 'event', 'social', 'click', d);
+	    });
+	    $('.btn-resume').click(function() {
+				var d = $(this).data('ga');
+	    	ga('send', 'event', 'resume', 'click', d);
+	    });
+	    $('.portfolio-link').click(function() {
+				var d = $(this).data('ga');
+	    	ga('send', 'event', 'portfolio', 'click', d);
+	    });
+	  };
+
+		waitGA();
+	})($);
 });

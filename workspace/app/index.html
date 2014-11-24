@@ -54,15 +54,15 @@
           <div class="col-md-12">
             <div class="intro contact">
               <ul class="list-inline">
-                <li><a href="mailto:benjaminhuang1@gmail.com" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a></li>
-                <li><a href="https://github.com/benjah1" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/pub/zhibin-huang/2a/28/726" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a></li>
-                <li><a href="https://twitter.com/@benjaH_1" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a></li>
+                <li><a href="mailto:benjaminhuang1@gmail.com" data-ga="email" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a></li>
+                <li><a href="https://github.com/benjah1" target="_blank" data-ga="github" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/pub/zhibin-huang/2a/28/726" target="_blank" data-ga="linkedin" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a></li>
+                <li><a href="https://twitter.com/@benjaH_1" target="_blank" data-ga="twitter" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a></li>
               </ul>
             </div>
             <h1 class="name">Zhibin Huang</h1>
             <div class="intro intro-text"><span class="skills"><span itemprop="title">Web Developer</span> - Full Stack - <div itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><div itemprop="locality">Toronto</div>, <div itemprop="region">Ontario</div></div></span><span itemprop="email" class="email print-only">benjaminhuang1@gmail.com</span><span itemprop="url" class="link print-only">http://benjah1.github.io</span></div>
-            <div class="intro resume"><a onclick="window.print();" class="btn btn-primary btn-lg">Print Resume</a><span>or</span><a target="_blank" href="/Resume.pdf" class="btn btn-primary btn-lg">Resume.pdf</a></div>
+            <div class="intro resume"><a onclick="window.print();" data-ga="print" class="btn btn-primary btn-lg btn-resume">Print Resume</a><span>or</span><a target="_blank" href="/Resume.pdf" data-ga="pdf" class="btn btn-primary btn-lg btn-resume">Resume.pdf</a></div>
           </div>
         </div>
       </div>
@@ -169,16 +169,16 @@
           </div>
         </div>
         <div class="row">
-          <div id="portfolio-modal0" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal0" data-toggle="modal" class="portfolio-link"><img src="images/portfolio/ilpa.jpg" alt="ILPA logo" class="img-responsive"></a></div>
-          <div id="portfolio-modal1" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal1" data-toggle="modal" class="portfolio-link"><img src="images/portfolio/bgcc.jpg" alt="BGCC logo" class="img-responsive"></a></div>
-          <div id="portfolio-modal2" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal2" data-toggle="modal" class="portfolio-link"><img src="images/portfolio/radii.jpg" alt="Radii logo" class="img-responsive"></a></div>
-          <div id="portfolio-modal3" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal3" data-toggle="modal" class="portfolio-link">
+          <div id="portfolio-modal0" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal0" data-toggle="modal" data-ga="ilpa" class="portfolio-link"><img src="images/portfolio/ilpa.jpg" alt="ILPA logo" class="img-responsive"></a></div>
+          <div id="portfolio-modal1" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal1" data-toggle="modal" data-ga="bgcc" class="portfolio-link"><img src="images/portfolio/bgcc.jpg" alt="BGCC logo" class="img-responsive"></a></div>
+          <div id="portfolio-modal2" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal2" data-toggle="modal" data-ga="radii" class="portfolio-link"><img src="images/portfolio/radii.jpg" alt="Radii logo" class="img-responsive"></a></div>
+          <div id="portfolio-modal3" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal3" data-toggle="modal" data-ga="other" class="portfolio-link">
               <div class="portfolio-custom">
                 <div>
                   <div>Other Project</div>
                 </div><img src="images/portfolio/custom.jpg" alt="placeholder image" class="img-responsive">
               </div></a></div>
-          <div id="portfolio-modal4" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal4" data-toggle="modal" class="portfolio-link">
+          <div id="portfolio-modal4" class="col-sm-6 col-md-4 portfolio-item"><a href="#portfolioModal4" data-toggle="modal" data-ga="personal" class="portfolio-link">
               <div class="portfolio-custom">
                 <div>
                   <div>Personal Experience</div>
@@ -430,8 +430,6 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
      
-    ga('create', 'UA-55892930-1', 'auto');
-    ga('send', 'pageview');
     </script>
   </body>
 </html>
