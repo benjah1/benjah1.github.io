@@ -9,7 +9,7 @@
         "content": "http://github.com/benjah1"
       }, {
         "name": "keywords",
-        "content": "Zhibin, Web, Web application, PHP, JavaScript, Developer, WordPress, Portfolio, Resume, Toronto, Ontario"
+        "content": "Zhibin, Web, Web application, PHP, JavaScript, Developer, Solution, WordPress, Portfolio, Resume, Toronto, Ontario"
       }, {
         "name": "robots",
         "content": "index, follow"
@@ -41,10 +41,10 @@
 		"php" : "To obtain a PHP & JavaScript developer position where I can contribute my skills and experience in web to further development of the organization and achieve growth in my professional career."
 	},
 	"skills" : {
-		"Languages" : "PHP (ZEC, ZEND022796), JavaScript, Ruby, ActionScript, HTML5, CSS3, SQL, Regex, JSON, XML.",
+		"Languages" : "PHP (ZEC, ZEND022796), UML, JavaScript, Ruby, ActionScript, HTML5, CSS3, SQL, Regex, JSON, XML.",
 		"Tools" : "Git, Vagrant, Composer, Npm, Gem, Bower, Yeoman, Grunt, Gulp, Sass, Jade, JSLint, Karma, Selenium, Travis CI, Jenkins, XDebug, Various browser debugging tools.",
 		"Libraries" : "WordPress, jQuery, Angular, Bootstrap, Rails, Mocha, Chai.",
-		"Skills": "Design Patterns, Data Structures, Algorithms, Responsive Design, Workflow."
+		"Skills": "Design Patterns, Data Structures, Algorithms, Responsive Design, Workflow, A/B Testing, Data collection and analysis"
 	},
 	
 	"portfolios" : [
@@ -64,13 +64,13 @@
 			"projects" : [
 				{
 					"name": "LPA Ratings Tool, 2011",
-					"desc": "An international scorecard PHP web application. I proposed a system design that supports conditional questions, instant saves, scoring system. As a core developer, I led a team of 3 members to implement the design. After launched, I continued on supporting this application, and developed add-on of third party portal access for temporary legal counsels."
+					"desc": "An international scorecard PHP web application. I proposed a system design that supports conditional questions, instant saves, scoring system. As a core developer, I led a team of 3 members to implement the design. After launched, I continued on supporting this application, and developed add-on of third party portal access for temporary legal counsels. We gained a great trust from the client on building large implementation."
 				},{
 					"name": "GP Economics Application, 2012",
-					"desc": "Excel base international business analysis PHP web application. I adapted the chain-of-responsibility pattern, designed an engine with an optimized excel and integrated Google chart for visual data analysis. I led a team of 5 members to develop and launch it in 3 weeks."
+					"desc": "Excel base international business analysis PHP web application. I adapted the chain-of-responsibility pattern, designed an engine with an optimized excel and integrated Google chart for visual data analysis. At a result, I successfully led a team of 5 members to develop and launch it in 3 weeks."
 				},{
 					"name": "General Partner Profile, 2013",
-					"desc": "An international online business portfolio network which is integrated with Euclid's ClearVantage (desktop Association Management Software) through XML communication. This integration speeded up the workflow in ILPA, and the online portfolio is used by thousands of paid members."
+					"desc": "An international online business portfolio network which is integrated with Euclid's ClearVantage (desktop Association Management Software) through XML communication. This integration speeded up the workflow in ILPA, and the online portfolio is used by thousands of paid members around the world."
 				}
 			],
 			"source" : [
@@ -123,7 +123,7 @@
 						"src": "images/portfolio/radii-2014-home.jpg",
 						"alt": "Radii 2014 homepage"
 					},
-					"desc": "A business and blogging platform with WordPress 3.9.1. I worked closely with the designers and created a highly end-user-friendly bootstrap-supported editor, of which content is pre-compiled for search and performance, based on <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>.",
+					"desc": "A business and blogging platform with WordPress 3.9.1. I worked closely with the designers and created a highly end-user-friendly bootstrap-supported editor, of which content is pre-compiled for search and performance, based on <abbr title='WordPress Advanced Custom Fields plugin'>ACF</abbr>. This solution fills the gap between traditional copywriter and modern website architect.",
 					"url": "http://goradii.com"
 				},{
 					"name": "WordPress website, 2011",
@@ -183,10 +183,10 @@
 						"src": "images/portfolio/play-store.jpg",
 						"alt": "benjaminhuang on Play Store"
 					},
-					"desc": "Created and published 7 Android Applications in HTML with PhoneGap or native JAVA with SDK for exercising."
+					"desc": "Created and published 7 Android Applications in HTML with PhoneGap or native JAVA with SDK for exercising workflow on mobile development."
 				},{
 					"name": "Events Organizer, 2014 - Present",
-					"desc": "Organizing offline study and hangout events on a weekly basis in a Chinese programmers community."
+					"desc": "Organizing offline study and hang out events on a weekly basis in a Chinese programmers community."
 				}
 			]
 		}
