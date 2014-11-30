@@ -55,21 +55,21 @@ window.jQuery(function($) {
 			}
 		};
 
-		var runGA = function(ga) {
-	    ga('create', 'UA-55892930-1', 'auto');
-	    ga('send', 'pageview');
+		var runGA = function() {
+	    window.ga('create', 'UA-55892930-1', 'auto');
+	    window.ga('send', 'pageview');
 
 	    $('.btn-social').click(function() {
 	    	var d = $(this).data('ga');
-	    	ga('send', 'event', 'social', 'click', d);
+	    	window.ga('send', 'event', 'social', 'click', d);
 	    });
 	    $('.btn-resume').click(function() {
 				var d = $(this).data('ga');
-	    	ga('send', 'event', 'resume', 'click', d);
-	    });
+	    	window.ga('send', 'event', 'resume', 'click', d);
+      });
 	    $('.portfolio-link').click(function() {
 				var d = $(this).data('ga');
-	    	ga('send', 'event', 'portfolio', 'click', d);
+	    	window.ga('send', 'event', 'portfolio', 'click', d);
 	    });
 	  };
 
