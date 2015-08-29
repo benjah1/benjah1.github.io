@@ -4,6 +4,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import ejsData from './data/data.js';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -41,7 +42,13 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('html', ['styles'], () => {
+gulp.task('ejs', () => {
+  return gulp.src('app/templates/**/*.ejs')
+    .pipe($.ejs(ejsData))
+    .pipe(gulp.dest('app'));
+});
+
+gulp.task('html', ['ejs', 'styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
   return gulp.src('app/*.html')
@@ -89,7 +96,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], () => {
+gulp.task('serve', ['ejs', 'styles', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -102,12 +109,14 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   });
 
   gulp.watch([
-    'app/*.html',
+    'app/data/*.js',
+    'app/templates/**/*.ejs',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/templates/**/*.ejs', ['ejs']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
