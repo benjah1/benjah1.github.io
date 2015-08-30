@@ -3,6 +3,7 @@ import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
+import fresh from 'fresh-require';
 import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
@@ -42,10 +43,7 @@ gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('ejs', () => {
-  if (require.cache[__dirname + '/app/data/data.js']) {
-    require.cache[__dirname + '/app/data/data.js'] = null;
-  }
-  var data = require('./app/data/data.js');
+  var data = fresh('./app/data/data.js', require);
 
   return gulp.src('app/templates/**/*.ejs')
     .pipe($.ejs(data))
