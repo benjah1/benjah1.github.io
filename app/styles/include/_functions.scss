@@ -1,0 +1,13 @@
+$media: screen;
+$feature: max-width;
+$medium: 768px;
+$small: 480px;
+
+@mixin modular-mq($breakpoint) {
+  @if $breakpoint == medium {
+    @media #{$media} and ($feature: $medium) { @content; }
+  }
+  @else if $breakpoint == small {
+    @media #{$media} and ($feature: $small) { @content; }
+  }
+}

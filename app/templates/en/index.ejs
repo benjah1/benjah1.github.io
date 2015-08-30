@@ -64,6 +64,9 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="/bower_components/gridism/gridism.css">
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css">
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -77,23 +80,29 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header>
-      <h1><%= data.name %></h1>
-      <nav>
-        <ul>
-          <% for (var i = 0, ilen = data.nav.length; i < ilen; ++i) { %>
-            <li><%= data.nav[i] %></li>
-          <% } %>
-        </ul>
-      </nav>
-
-      <section>
-        <ul>
-          <% for (var i = 0, ilen = data.social.length; i < ilen; ++i) { %>
-            <li><%= data.social[i].name %></li>
-          <% } %>
-        </ul>
-      </section>
+    <header class="header">
+      <div class="container">
+        <div class="header-logo"><a href='/en/'></a></div>
+        <div class="content">
+          <h1 class="header-title"><%= data.header %></h1>
+          <nav class="header-menu">
+            <ul>
+              <% data.nav.map(function(item) { %>
+                <li><a class="<%item['class'] %>" href="<%= item.link %>"><%= item.name %></a></li>
+              <% }); %>
+            </ul>
+          </nav>
+          <section class="header-social">
+            <ul>
+              <% data.social.map(function(item) { %>
+                <li><a target="_blank" href="<%= item.link %>">
+                  <i class="<%= item['class'] %>"></i>
+                </a></li>
+              <% }); %>
+            </ul>
+          </section>
+        </div>
+      </div>
     </header>
 
     <% data.sections.map(function(item) { %>

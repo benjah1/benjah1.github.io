@@ -37,23 +37,36 @@ data.cn.name = '黄志斌';
 data.en.title = 'Zhibin Huang - Senior PHP developer - Toronto Ontario';
 data.cn.title = 'Zhibin Huang - PHP开发工程师 - Toronto Ontario';
 
-data.en.nav = [
-  'Design',
-  'Develop',
-  'Deploy',
-  'Resume'
-];
+data.en.header = 'I am a Developer';
+data.cn.header = 'I am a Developer';
+
+data.en.nav = [{
+  name: 'Design',
+  link: '#Design'
+}, {
+  name: 'Develop',
+  link: '#Develop'
+}, {
+  name: 'Deploy',
+  link: '#Deploy'
+}, {
+  name: 'Resume',
+ 'class': 'print'
+}];
 data.cn.nav = data.en.nav;
 
 data.en.social = [{
   name: 'Github',
-  link: ''
+  'class': 'fa fa-fw fa-github',
+  link: 'https://github.com/benjah1'
 }, {
   name: 'LinkedIn',
-  link: ''
+  'class': 'fa fa-fw fa-linkedin',
+  link: 'https://www.linkedin.com/pub/zhibin-huang/2a/28/726'
 }, {
   name: 'Twitter',
-  link: ''
+  'class': 'fa fa-fw fa-twitter',
+  link: 'https://twitter.com/@benjaH_1'
 }];
 
 data.cn.social = data.en.social;
