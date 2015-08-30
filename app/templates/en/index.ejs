@@ -1,13 +1,63 @@
 <!doctype html>
+<%
+  var data = en;
 
-<% var data = en; %>
+  /**
+   * Convert obj to html
+   *
+   * @see app/data/data.js
+   */
+  function convertObj(item, depth) {
+    var tmp = [], i, ilen, tag = 'div', attr = [], list = [];
 
-<html lang="">
+    if (depth <= 2) {
+      tag = 'section';
+    }
+
+    if (item.attr) {
+      for (i in item.attr) {
+        attr.push(i + '="' + item.attr[i] + '"');
+      }
+      tmp.push('<' + tag + ' '+ attr.join(' ') +'>');
+    } else {
+      tmp.push('<' + tag + '>');
+    }
+
+    if (item.title) {
+      tmp.push('<h' + depth + '>' + item.title + '</h' + depth + '>');
+    }
+    if (item.meta) {
+      for (i in item.meta) {
+        list.push('<li class="' + i + '">' + item.meta[i] + '</li>');
+      }
+    }
+    if (item.contents) {
+      for (i = 0, ilen = item.contents.length; i < ilen; ++i) {
+        if ('object' === typeof item.contents[i]) {
+          list.push('<li>' + convertObj(item.contents[i], depth + 1) + '</li>');
+        } else {
+          list.push('<li>' + item.contents[i] + '</li>');
+        }
+      }
+    }
+
+    if (list.length) {
+      tmp.push('<ul>' + list.join('') + '</ul>');
+    }
+
+    tmp.push('</' + tag + '>');
+
+    return tmp.join('');
+  }
+
+%>
+
+<html lang="<%= data.locale %>">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>react tur</title>
+    <title><%= data.title %></title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -18,7 +68,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <!-- endbuild -->
 
   </head>
@@ -27,12 +77,11 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
     <header>
       <h1><%= data.name %></h1>
       <nav>
         <ul>
-          <% for (var i = 0; i < data.nav.length; ++i) { %>
+          <% for (var i = 0, ilen = data.nav.length; i < ilen; ++i) { %>
             <li><%= data.nav[i] %></li>
           <% } %>
         </ul>
@@ -40,85 +89,16 @@
 
       <section>
         <ul>
-          <% for (var i = 0; i < data.social.length; ++i) { %>
+          <% for (var i = 0, ilen = data.social.length; i < ilen; ++i) { %>
             <li><%= data.social[i].name %></li>
           <% } %>
         </ul>
       </section>
     </header>
 
-    <section>
-      <header><h2>Design</h2></header>
-      <div>
-        <h3>System Design</h3>
-        <ul>
-          <li>Design system in Multi-tier Architecture. Focus on creating flexible and reusable components.</li>
-          <li>Design for Scalability. Experience in decide and apply vertical scale and horizontal scale.</li>
-          <li>For legacy system, Refactoring to create modular components.</li>
-        </ul>
-
-        <h3>Design Pattern</h3>
-        <ul>
-          <li>Proficient with GoF design patterns in practise.</li>
-          <li>Strictly follow the SOLID principle.</li>
-          <li>Use Abstraction to managing complexity of the system.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <header><h2>Develop</h2></header>
-      <div>
-        <h3>Data Structure</h3>
-        <ul>
-          <li>Master of all common data structure.</li>
-          <li>Linear: Array, Stack, Queue, Linked List.</li>
-          <li>Non-Linear: Hash, Heap, Binary Search Tree, Red-black Tree, Graph.</li>
-        </ul>
-
-        <h3>Algorithm</h3>
-        <ul>
-          <li>Familiar with applying or designing suitable algorithm.</li>
-          <li>Proficient in using big O complexity to analyze performance.</li>
-        </ul>
-
-        <h3>Language</h3>
-        <ul>
-          <li>Zend certificate PHP engineer.</li>
-          <li>Favorite and proficient in JavaScript.</li>
-          <li>Able to process in any popular languages.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <header><h2>Deploy</h2></header>
-      <div>
-        <h3>Build</h3>
-        <ul>
-          <li>Build project with Jenkins, or Travis.</li>
-          <li>Create build tasks with Grunt, Gulp or Make.</li>
-          <li>Familiar with Pre-processing and Post-processing on source files and assists.</li>
-        </ul>
-
-        <h3>Virtualization</h3>
-        <ul>
-          <li>Create and maintain Vagrant and Docker.</li>
-        </ul>
-
-        <h3>Administrative</h3>
-        <ul>
-          <li>Proficient in using Linux. Familiar with Bash script.</li>
-          <li>Proficient in setting up web service with Apache or Nginx.</li>
-          <li>Experience in trouble-shooting networking issue.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <header><h2>Resume</h2></header>
-      <div></div>
-    </section>
+    <% data.sections.map(function(item) { %>
+      <%- convertObj(data.sections[i], 2); %>
+    <% }); %>
 
     <footer>
       <small>

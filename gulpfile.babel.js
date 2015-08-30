@@ -4,7 +4,6 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
-import ejsData from './data/data.js';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -43,8 +42,13 @@ gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('ejs', () => {
+  if (require.cache[__dirname + '/app/data/data.js']) {
+    require.cache[__dirname + '/app/data/data.js'] = null;
+  }
+  var data = require('./app/data/data.js');
+
   return gulp.src('app/templates/**/*.ejs')
-    .pipe($.ejs(ejsData))
+    .pipe($.ejs(data))
     .pipe(gulp.dest('app'));
 });
 
@@ -109,13 +113,13 @@ gulp.task('serve', ['ejs', 'styles', 'fonts'], () => {
   });
 
   gulp.watch([
-    'app/data/*.js',
-    'app/templates/**/*.ejs',
+    'app/**/*.html',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/data/**/*.js', ['ejs']);
   gulp.watch('app/templates/**/*.ejs', ['ejs']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
