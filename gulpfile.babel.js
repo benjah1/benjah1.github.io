@@ -5,6 +5,9 @@ import browserSync from 'browser-sync';
 import del from 'del';
 import fresh from 'fresh-require';
 import {stream as wiredep} from 'wiredep';
+import browserify from 'browserify';
+import source from 'vinyl-source-stream';
+import buffer from 'vinyl-buffer';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -50,7 +53,29 @@ gulp.task('ejs', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('html', ['ejs', 'styles'], () => {
+gulp.task('js', ['lint'], () => {
+  // @see https://github.com/gulpjs/gulp/blob/master/docs/recipes/browserify-transforms.md
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: 'main.js',
+    basedir: 'app/scripts/',
+    debug: true//,
+    // defining transforms here will avoid crashing your stream
+    // transform: [reactify]
+  });
+
+  return b.bundle()
+    .pipe(source('main.js'))
+    .pipe(buffer())
+    .pipe($.sourcemaps.init({loadMaps: true}))
+        // Add transformation tasks to the pipeline here.
+        // .pipe(uglify())
+    .on('error', $.util.log)
+    .pipe($.sourcemaps.write())
+    .pipe(gulp.dest('.tmp/scripts'));
+});
+
+gulp.task('html', ['ejs', 'js', 'styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
   return gulp.src('app/*.html')
@@ -98,7 +123,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['ejs', 'styles', 'fonts'], () => {
+gulp.task('serve', ['ejs', 'js', 'styles', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -119,6 +144,7 @@ gulp.task('serve', ['ejs', 'styles', 'fonts'], () => {
 
   gulp.watch('app/data/**/*.js', ['ejs']);
   gulp.watch('app/templates/**/*.ejs', ['ejs']);
+  gulp.watch('app/scripts/**/*.js', ['js']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
