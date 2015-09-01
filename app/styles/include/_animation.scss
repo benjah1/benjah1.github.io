@@ -1,0 +1,49 @@
+@keyframes downHide {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes downShow {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes upHide {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+ to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+}
+
+@keyframes upShow {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}

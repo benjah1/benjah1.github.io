@@ -1,7 +1,10 @@
 $color-green: #007f00;
 $color-white: rgba(255,255,255, 0.9);
 
+$time-trans: 2s;
+
 @import 'include/functions';
+@import 'include/animation';
 
 html {
   overflow: hidden;
@@ -14,9 +17,11 @@ body {
 }
 
 .container {
-  width: 100%;
+  position: relative;
+  width: auto;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 @import 'include/header';

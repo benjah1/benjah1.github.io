@@ -1,25 +1,29 @@
 .header {
-  height: 100vh;
-  min-height: 200px;
-  background-color: $color-green;
 
-  .container {
-    height: 80%;
-    transform: translateY(10%);
-    text-align: center;
-  }
+  /**
+   * Normal state
+   */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100px;
+  background-color: $color-green;
+  overflow: hidden;
+  will-change: height, min-height;
 
   &-logo {
-    width: 80vmin;
-    max-width: 35%;
-    height: 100%;
+    margin-left: -100px;
+    width: 80px;
+    height: 100px;
     position: relative;
     display: inline-block;
+    will-change: margin, width, max-width, height, transform;
 
     a {
       width: 100%;
       height: 100%;
       display: inline-block;
+      position: relative;
 
       &:after {
         content: '';
@@ -35,40 +39,40 @@
         opacity: 0.9;
       }
     }
+  }
 
-    @include modular-mq(small) {
-      max-width: none;
-      width: 60vmax;
-      height: 60vmax;
-    }
+  .container {
+    height: 100%;
+    padding: 0 20px 0 120px;
+    will-change: height, padding, transform;
   }
 
   .content {
+    position: relative;
     display: inline-block;
+    width: 100%;
+    top: 50%;
+    padding-left: 100px;
+    margin-left: -100px;
     vertical-align: top;
     transform: translateY(-50%);
-    position: relative;
-    top: 50%;
-
-    @include modular-mq(small) {
-      vertical-align: inherit;
-      transform: none;
-      top: auto;
-    }
+    will-change: padding, top, width, transform;
   }
 
   &-title, &-menu, &-social {
+    display: inline-block;
+    margin: 25px 0;
     color: $color-white;
     text-align: center;
     font-size: 1.05rem;
     font-weight: normal;
-    margin: 25px 0;
     // text-shadow: 0 0 1px $color-white;
 
     ul {
       list-style: none;
       clear: both;
       padding: 0;
+      margin: 0;
 
       li {
         display: inline-block;
@@ -76,9 +80,19 @@
     }
   }
 
+  &-title {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    will-change: width, opacity, height, visibility, margin;
+  }
+
   &-menu {
+    float: left;
+    will-change: width, margin, opacity;
     li + li:before {
-      content: '-';
+      content: ' ';
       margin: 0 11px 0 7px;
     }
     a {
@@ -88,6 +102,8 @@
   }
 
   &-social {
+    float: right;
+    will-change: width, margin, opacity;
     li + li:before {
       content: ' ';
       margin: 0 10px;
@@ -97,7 +113,266 @@
     }
   }
 
-  &-sm {
+  /**
+   * Load State
+   */
+  &.load {
+    animation: load-header $time-trans*0.4 $time-trans*0.2 forwards;
 
+    .header-logo {
+      animation: load-header-logo $time-trans*0.4 $time-trans*0.2 forwards;
+    }
+
+    .container {
+      animation: load-header-container $time-trans*0.4 $time-trans*0.2 forwards;
+    }
+
+    .content {
+      animation: load-header-content $time-trans*0 $time-trans*0.3 forwards;
+    }
+
+    .header-title {
+      animation-name: load-header-title, downShow;
+      animation-duration: $time-trans*0, $time-trans*0.1;
+      animation-delay: $time-trans*0.4, $time-trans*0.7;
+      animation-fill-mode: forwards, forwards;
+    }
+
+    .header-menu {
+      animation-name: downHide, load-header-menu, downShow;
+      animation-duration: $time-trans*0.1, $time-trans*0.1, $time-trans*0.1;
+      animation-delay: $time-trans*0, $time-trans*0.4, $time-trans*0.8;
+      animation-fill-mode: forwards, forwards, forwards;
+    }
+
+    .header-social {
+      animation-name: downHide, load-header-social, downShow;
+      animation-duration: $time-trans*0.1, $time-trans*0.1, $time-trans*0.1;
+      animation-delay: $time-trans*0.1, $time-trans*0.4, $time-trans*0.9;
+      animation-fill-mode: forwards, forwards, forwards;
+    }
   }
+
+  @keyframes load-header {
+    to {
+      height: 100vh;
+      min-height: 200px;
+    }
+  }
+
+  @keyframes load-header-logo {
+    to {
+      margin-left: 50%;
+      width: 80vmin;
+      max-width: 35%;
+      height: 100%;
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes load-header-container {
+    to {
+      height: 80%;
+      padding: 0 20px;
+      transform: translateY(10%);
+    }
+  }
+
+  @keyframes load-header-content {
+    to {
+      padding-left: 50%;
+      top: -50%;
+      width: auto;
+      transform: translateY(-30%);
+   }
+  }
+
+  @keyframes load-header-title {
+    to {
+      width: 100%;
+      opacity: 0;
+      height: auto;
+      visibility: visible;
+      margin: 0 0 25px 0;
+    }
+  }
+
+  @keyframes load-header-menu {
+    to {
+      width: 100%;
+      margin: 0 0 25px 0;
+    }
+  }
+
+  @keyframes load-header-social {
+    to {
+      margin: 0 0 25px 0;
+      width: 100%;
+    }
+  }
+
+
+  /**
+   * Loaded State, and unload init state
+   */
+  &.loaded, &.unload {
+    height: 100vh;
+    min-height: 200px;
+
+    .header-logo {
+      margin-left: 50%;
+      width: 80vmin;
+      max-width: 35%;
+      height: 100%;
+      transform: translateX(-100%);
+
+      @include modular-mq(small) {
+        max-width: none;
+        width: 60vmax;
+        height: 60vmax;
+      }
+    }
+
+    .container {
+      height: 80%;
+      padding: 0 20px;
+      transform: translateY(10%);
+    }
+
+    .content {
+      padding-left: 50%;
+      top: -50%;
+      width: auto;
+      transform: translateY(-30%);
+
+      @include modular-mq(small) {
+        vertical-align: inherit;
+        transform: none;
+        top: auto;
+      }
+    }
+
+    .header-title, .header-menu, .header-social {
+      width: 100%;
+      margin: 0 0 25px 0;
+    }
+
+    .header-title {
+      height: auto;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .header-menu {
+    /* // cant animate easily
+      li + li:before {
+        content: '-';
+        margin: 0 11px 0 7px;
+      }
+    */
+    }
+
+    .header-social {
+    }
+  }
+
+
+  /**
+   * Unload State
+   */
+  &.unload {
+    animation: unload-header $time-trans*0.4 $time-trans*0.3 forwards;
+
+    .header-logo {
+      animation: unload-header-logo $time-trans*0.4 $time-trans*0.3 forwards;
+    }
+
+    .container {
+      animation: unload-header-container $time-trans*0.4 $time-trans*0.3 forwards;
+    }
+
+    .content {
+      animation: unload-header-content $time-trans*0 $time-trans*0.4 forwards;
+    }
+
+    .header-title {
+      animation-name: upHide, unload-header-title;
+      animation-duration: $time-trans*0.1, $time-trans*0;
+      animation-delay: $time-trans*0.2, $time-trans*0.4;
+      animation-fill-mode: forwards, forwards;
+    }
+
+    .header-menu {
+      animation-name: upHide, unload-header-menu, downShow;
+      animation-duration: $time-trans*0.1, $time-trans*0.1, $time-trans*0.1;
+      animation-delay: $time-trans*0.1, $time-trans*0.4, $time-trans*0.8;
+      animation-fill-mode: forwards, forwards, forwards;
+    }
+
+    .header-social {
+      animation-name: upHide, unload-header-social, downShow;
+      animation-duration: $time-trans*0.1, $time-trans*0.1, $time-trans*0.1;
+      animation-delay: $time-trans*0, $time-trans*0.4, $time-trans*0.9;
+      animation-fill-mode: forwards, forwards, forwards;
+    }
+  }
+
+  @keyframes unload-header {
+    to {
+      height: 100px;
+      min-height: 0;
+    }
+  }
+
+  @keyframes unload-header-logo {
+    to {
+      margin-left: -100px;
+      width: 80px;
+      max-width: none;
+      height: 100px;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes unload-header-container {
+    to {
+      height: 100%;
+      padding: 0 20px 0 120px;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes unload-header-content {
+    to {
+      padding-left: 100px;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+   }
+  }
+
+  @keyframes unload-header-title {
+    to {
+      width: 0;
+      opacity: 0;
+      height: 0;
+      visibility: hidden;
+      margin:  25px 0;
+    }
+  }
+
+  @keyframes unload-header-menu {
+    to {
+      width: auto;
+      margin: 25px 0;
+    }
+  }
+
+  @keyframes unload-header-social {
+    to {
+      margin: 25px 0;
+      width: auto;
+    }
+  }
+
 }
