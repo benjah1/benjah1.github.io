@@ -65,7 +65,7 @@ gulp.task('js', ['lint'], () => {
   });
 
   return b.bundle()
-    .pipe(source('main.js'))
+    .pipe(source('app.js'))
     .pipe(buffer())
     .pipe($.sourcemaps.init({loadMaps: true}))
         // Add transformation tasks to the pipeline here.
@@ -75,10 +75,10 @@ gulp.task('js', ['lint'], () => {
     .pipe(gulp.dest('.tmp/scripts'));
 });
 
-gulp.task('html', ['ejs', 'js', 'styles'], () => {
+gulp.task('html', ['js', 'styles', 'ejs'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  return gulp.src('app/*.html')
+  return gulp.src('app/**/*.html')
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
@@ -123,7 +123,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['ejs', 'js', 'styles', 'fonts'], () => {
+gulp.task('serve', ['js', 'styles', 'ejs', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -192,7 +192,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

@@ -33,7 +33,7 @@
     "wiredep": "^2.2.2"
   },
   "browser": {
-    "jQuery": "./bower_components/jquery/dist/jquery.js",
+    "jQuery": "./bower_components/jquery/dist/jquery.min.js",
     "Stately": "./bower_components/Stately.js/Stately.js"
   },
   "eslintConfig": {
