@@ -1,11 +1,10 @@
 'use strict';
 
 var AppStateFactory = require('./AppStateFactory.js');
-var AppStateController = require('./AppStateController.js');
 
-var transitionTime = 1000;
+var transitionTime = 2000;
 
-var appStateFactory = new AppStateFactory(new AppStateController(), transitionTime);
+var appStateFactory = new AppStateFactory(transitionTime);
 window.fsm = appStateFactory.getFSM();
 
 // testing

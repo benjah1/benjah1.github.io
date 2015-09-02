@@ -1,7 +1,7 @@
 var secDevelopEn = {
   title: 'Develop',
   attr: {
-    'class': ''
+    'class': 'develop'
   },
   contents: [{
     title: 'Data Structure',

@@ -1,7 +1,7 @@
 var secDesignEn = {
   title: 'Desgin',
   attr: {
-    'class': ''
+    'class': 'design'
   },
   contents: [{
     title: 'System Design',

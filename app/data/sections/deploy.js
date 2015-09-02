@@ -1,7 +1,7 @@
 var secDeployEn = {
   title: 'Deploy',
   attr: {
-    'class': ''
+    'class': 'deploy'
   },
   contents: [{
     title: 'Build',
