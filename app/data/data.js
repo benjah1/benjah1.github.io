@@ -42,13 +42,16 @@ data.cn.header = 'I am a Developer';
 
 data.en.nav = [{
   name: 'Design',
-  link: '#Design'
+  link: '#design',
+  'class': 'inlink'
 }, {
   name: 'Develop',
-  link: '#Develop'
+  link: '#develop',
+  'class': 'inlink'
 }, {
   name: 'Deploy',
-  link: '#Deploy'
+  link: '#deploy',
+  'class': 'inlink'
 }, {
   name: 'Resume',
  'class': 'print'

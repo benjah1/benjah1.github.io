@@ -17,6 +17,7 @@
     height: 100px;
     position: relative;
     display: inline-block;
+    z-index: 2;
     will-change: margin, width, max-width, height, transform;
 
     a {
