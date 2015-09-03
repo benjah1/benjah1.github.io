@@ -77,12 +77,10 @@
     <!-- endbuild -->
 
   </head>
-  <body>
+  <body class="init">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div class="init loaded"></div>
 
     <header class="index header">
       <div class="container">
@@ -108,6 +106,11 @@
         </div>
       </div>
     </header>
+
+    <div class="loading loaded">
+      <div class="loading-dot"></div>
+      <div class="loading-dot"></div>
+    </div>
 
     <% data.sections.map(function(item) { %>
       <%- convertObj(item, 2); %>

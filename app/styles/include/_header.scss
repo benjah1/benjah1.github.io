@@ -9,6 +9,7 @@
   height: 100px;
   background-color: $color-green;
   overflow: hidden;
+  z-index: 1;
   will-change: height, min-height;
 
   &-logo {
@@ -118,50 +119,50 @@
    * Load State
    */
   &.load {
-    animation: load-header $time-trans*0.4 $time-trans*0.2 forwards;
+    animation: header-load $time-trans*0.4 $time-trans*0.2 forwards;
 
     .header-logo {
-      animation: load-header-logo $time-trans*0.4 $time-trans*0.2 forwards;
+      animation: header-load-logo $time-trans*0.4 $time-trans*0.2 forwards;
     }
 
     .container {
-      animation: load-header-container $time-trans*0.4 $time-trans*0.2 forwards;
+      animation: header-load-container $time-trans*0.4 $time-trans*0.2 forwards;
     }
 
     .content {
-      animation: load-header-content $time-trans*0 $time-trans*0.3 forwards;
+      animation: header-load-content $time-trans*0 $time-trans*0.3 forwards;
     }
 
     .header-title {
-      animation-name: load-header-title, downShow;
+      animation-name: header-load-title, downShow;
       animation-duration: $time-trans*0, $time-trans*0.1;
       animation-delay: $time-trans*0.4, $time-trans*0.7;
       animation-fill-mode: forwards, forwards;
     }
 
     .header-menu {
-      animation-name: downHide, load-header-menu, downShow;
+      animation-name: downHide, header-load-menu, downShow;
       animation-duration: $time-trans*0.1, $time-trans*0.1, $time-trans*0.1;
       animation-delay: $time-trans*0, $time-trans*0.4, $time-trans*0.8;
       animation-fill-mode: forwards, forwards, forwards;
     }
 
     .header-social {
-      animation-name: downHide, load-header-social, downShow;
+      animation-name: downHide, header-load-social, downShow;
       animation-duration: $time-trans*0.1, $time-trans*0.1, $time-trans*0.1;
       animation-delay: $time-trans*0.1, $time-trans*0.4, $time-trans*0.9;
       animation-fill-mode: forwards, forwards, forwards;
     }
   }
 
-  @keyframes load-header {
+  @keyframes header-load {
     to {
       height: 100vh;
       min-height: 200px;
     }
   }
 
-  @keyframes load-header-logo {
+  @keyframes header-load-logo {
     to {
       margin-left: 50%;
       width: 80vmin;
@@ -171,7 +172,7 @@
     }
   }
 
-  @keyframes load-header-container {
+  @keyframes header-load-container {
     to {
       height: 80%;
       padding: 0 20px;
@@ -179,7 +180,7 @@
     }
   }
 
-  @keyframes load-header-content {
+  @keyframes header-load-content {
     to {
       padding-left: 50%;
       top: -50%;
@@ -188,7 +189,7 @@
    }
   }
 
-  @keyframes load-header-title {
+  @keyframes header-load-title {
     to {
       width: 100%;
       opacity: 0;
@@ -198,14 +199,14 @@
     }
   }
 
-  @keyframes load-header-menu {
+  @keyframes header-load-menu {
     to {
       width: 100%;
       margin: 0 0 25px 0;
     }
   }
 
-  @keyframes load-header-social {
+  @keyframes header-load-social {
     to {
       margin: 0 0 25px 0;
       width: 100%;
@@ -282,50 +283,50 @@
    * Unload State
    */
   &.unload {
-    animation: unload-header $time-trans*0.4 $time-trans*0.3 forwards;
+    animation: header-unload $time-trans*0.4 $time-trans*0.3 forwards;
 
     .header-logo {
-      animation: unload-header-logo $time-trans*0.4 $time-trans*0.3 forwards;
+      animation: header-unload-logo $time-trans*0.4 $time-trans*0.3 forwards;
     }
 
     .container {
-      animation: unload-header-container $time-trans*0.4 $time-trans*0.3 forwards;
+      animation: header-unload-container $time-trans*0.4 $time-trans*0.3 forwards;
     }
 
     .content {
-      animation: unload-header-content $time-trans*0 $time-trans*0.4 forwards;
+      animation: header-unload-content $time-trans*0 $time-trans*0.4 forwards;
     }
 
     .header-title {
-      animation-name: upHide, unload-header-title;
+      animation-name: upHide, header-unload-title;
       animation-duration: $time-trans*0.1, $time-trans*0;
       animation-delay: $time-trans*0.2, $time-trans*0.4;
       animation-fill-mode: forwards, forwards;
     }
 
     .header-menu {
-      animation-name: upHide, unload-header-menu, downShow;
+      animation-name: upHide, header-unload-menu, downShow;
       animation-duration: $time-trans*0.1, $time-trans*0.1, $time-trans*0.1;
       animation-delay: $time-trans*0.1, $time-trans*0.4, $time-trans*0.8;
       animation-fill-mode: forwards, forwards, forwards;
     }
 
     .header-social {
-      animation-name: upHide, unload-header-social, downShow;
+      animation-name: upHide, header-unload-social, downShow;
       animation-duration: $time-trans*0.1, $time-trans*0.1, $time-trans*0.1;
       animation-delay: $time-trans*0, $time-trans*0.4, $time-trans*0.9;
       animation-fill-mode: forwards, forwards, forwards;
     }
   }
 
-  @keyframes unload-header {
+  @keyframes header-unload {
     to {
       height: 100px;
       min-height: 0;
     }
   }
 
-  @keyframes unload-header-logo {
+  @keyframes header-unload-logo {
     to {
       margin-left: -100px;
       width: 80px;
@@ -335,7 +336,7 @@
     }
   }
 
-  @keyframes unload-header-container {
+  @keyframes header-unload-container {
     to {
       height: 100%;
       padding: 0 20px 0 120px;
@@ -343,7 +344,7 @@
     }
   }
 
-  @keyframes unload-header-content {
+  @keyframes header-unload-content {
     to {
       padding-left: 100px;
       top: 50%;
@@ -352,7 +353,7 @@
    }
   }
 
-  @keyframes unload-header-title {
+  @keyframes header-unload-title {
     to {
       width: 0;
       opacity: 0;
@@ -362,18 +363,66 @@
     }
   }
 
-  @keyframes unload-header-menu {
+  @keyframes header-unload-menu {
     to {
       width: auto;
       margin: 25px 0;
     }
   }
 
-  @keyframes unload-header-social {
+  @keyframes header-unload-social {
     to {
       margin: 25px 0;
       width: auto;
     }
   }
 
+}
+
+body.init .header {
+  z-index: -1;
+
+  &.load {
+    animation: none;
+    height: 100vh;
+    min-height: 200px;
+
+    .header-logo {
+      margin-left: 50%;
+      width: 80vmin;
+      max-width: 35%;
+      height: 100%;
+      transform: translateX(-100%);
+
+      animation: header-init-load-logo $time-trans forwards;
+    }
+
+    .container {
+      height: 80%;
+      padding: 0 20px;
+      transform: translateY(10%);
+      animation: none;
+    }
+
+    .content {
+      padding-left: 50%;
+      top: -50%;
+      width: auto;
+      transform: translateY(-30%);
+      animation: none;
+    }
+  }
+
+  @keyframes header-init-load-logo {
+    0% {}
+    5% {
+      transform: translateX(-50%) scale(0);
+    }
+    75% {
+      transform: translateX(-50%) scale(1);
+    }
+    100% {
+      transform: translateX(-100%) scale(1);
+    }
+  }
 }

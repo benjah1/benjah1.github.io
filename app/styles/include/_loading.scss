@@ -1,0 +1,75 @@
+.loading {
+
+  height: 0;
+  overflow: hidden;
+
+  &.loaded, &.unload {
+    $time-loading: 1s;
+    height: 100vh;
+    width: 100%;
+    background-color: $color-green;
+    text-align: center;
+
+    .loading-dot:after, .loading-dot:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: $color-white;
+      border-radius: 50%;
+      animation: loading-loaded-dot $time-loading cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate-reverse;
+      will-change: transform;
+    }
+
+    .loading-dot {
+      display: inline-block;
+      height: 20px;
+      width: 80px;
+      position: relative;
+      top: 50%;
+    }
+
+    .loading-dot:before {
+      left: -20px;
+    }
+
+    .loading-dot:after {
+      left: 20px;
+    }
+
+    .loading-dot:nth-child(odd):before {
+      animation-delay: $time-loading*-1;
+    }
+    .loading-dot:nth-child(odd):after {
+      animation-delay: $time-loading*-0.75;
+    }
+    .loading-dot:nth-child(even):before {
+      animation-delay: $time-loading*-0.5;
+    }
+    .loading-dot:nth-child(even):after {
+      animation-delay: $time-loading*-0;
+    }
+  }
+
+  @keyframes loading-loaded-dot {
+    from {
+      transform: translateY(-40px);
+    }
+    to {
+      transform: translateY(40px);
+    }
+  }
+
+  &.unload {
+    animation: loading-unload $time-trans/2 forwards;
+  }
+
+  @keyframes loading-unload {
+    to {
+      transform: translateY(-100%);
+    }
+  }
+}

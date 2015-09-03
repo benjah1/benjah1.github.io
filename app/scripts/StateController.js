@@ -1,7 +1,7 @@
 'use strict';
 
 var StateController = function() {
-  this.sections = ['init', 'index', 'design', 'develop', 'deploy', 'resume'];
+  this.sections = ['loading', 'index', 'design', 'develop', 'deploy', 'resume'];
   this.$ = require('jQuery');
   this.fsm = null;
   this.oldHash = window.location.hash;
@@ -14,7 +14,14 @@ StateController.prototype.setFSM = function(fsm) {
 StateController.prototype.onReady = function() {
   // todo: open whatever in the hashtag
   // or trigger the onhashchange function
-  this.fsm.open('index');
+  var that = this;
+  setTimeout(function() {
+    if (that.sections.indexOf(that.oldHash.replace('#', '')) === -1) {
+      window.location.hash = '#index';
+    } else {
+      that.onHashChange();
+    }
+  }, 100);
   this.bindEvents();
 };
 
@@ -34,21 +41,22 @@ StateController.prototype.onHashChange = function() {
   if(this.fsm.open(target) === true) {
     this.oldHash = '#' + target;
   } else {
-    console.log('reset hash');
     window.location.hash = this.oldHash;
   }
 };
 
 StateController.prototype.onLoadingOpen = function(sectionID) {
   console.log('Loading.open:' + sectionID);
-  console.log('".init" -> remove "loaded", add "unload"');
+  console.log('".loading" -> remove "loaded", add "unload"');
   console.log(sectionID + ' -> add "load"');
+  console.log('"body" -> add "init"');
 
   if (!this.isValidSection(sectionID)) {
     return false;
   }
 
-  this.$('.init').toggleClass('loaded unload');
+  this.$('body').addClass('init');
+  this.$('.loading').toggleClass('loaded unload');
   this.$('.' + sectionID).addClass('load');
 
   return true;
@@ -56,10 +64,12 @@ StateController.prototype.onLoadingOpen = function(sectionID) {
 
 StateController.prototype.onInitComplete = function() {
   console.log('Init.complete');
-  console.log('".init" -> remove "unload"');
+  console.log('".loading" -> remove "unload"');
   console.log('".load" -> remove "load", add "loaded"');
+  console.log('"body" -> remove "init"');
 
-  this.$('.init').removeClass('unload');
+  this.$('.init').removeClass('init');
+  this.$('.loading').removeClass('unload');
   this.$('.load').toggleClass('load loaded');
 };
 
